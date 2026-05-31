@@ -1,0 +1,1309 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>HACK//ZONE — Student Tech Events Hub</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+
+<style>
+  /* ─── RESET + VARS ─────────────────────────────────────── */
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --black: #000000;
+    --white: #FFFFFF;
+    --yellow: #FAFF00;
+    --cyan: #00F5FF;
+    --pink: #FF2D78;
+    --border: 3px solid #000;
+    --border-thick: 5px solid #000;
+    --shadow: 4px 4px 0 #000;
+    --shadow-lg: 6px 6px 0 #000;
+    --font-head: 'Space Grotesk', sans-serif;
+    --font-mono: 'IBM Plex Mono', monospace;
+  }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: var(--font-head);
+    background: var(--white);
+    color: var(--black);
+    overflow-x: hidden;
+    cursor: crosshair;
+  }
+
+  a { color: inherit; text-decoration: none; }
+  button { cursor: pointer; font-family: var(--font-head); }
+
+  /* ─── HERO ─────────────────────────────────────────────── */
+  #hero {
+    background: var(--black);
+    color: var(--white);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 60px 40px 0;
+    position: relative;
+    overflow: hidden;
+    border-bottom: var(--border-thick);
+  }
+
+  .hero-tag {
+    font-family: var(--font-mono);
+    font-size: 12px;
+    font-weight: 700;
+    color: var(--cyan);
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    margin-bottom: 24px;
+    border: 2px solid var(--cyan);
+    display: inline-block;
+    padding: 4px 12px;
+  }
+
+  .hero-title {
+    font-family: var(--font-head);
+    font-size: clamp(60px, 12vw, 160px);
+    font-weight: 700;
+    line-height: 0.9;
+    text-transform: uppercase;
+    letter-spacing: -4px;
+    color: var(--white);
+    position: relative;
+    z-index: 1;
+    margin-bottom: 8px;
+  }
+
+  .hero-title span.slash {
+    color: var(--yellow);
+    animation: glitch 3s infinite;
+  }
+
+  @keyframes glitch {
+    0%, 90%, 100% { text-shadow: none; transform: none; }
+    91% { text-shadow: 3px 0 var(--pink), -3px 0 var(--cyan); transform: skewX(-2deg); }
+    93% { text-shadow: -3px 0 var(--pink), 3px 0 var(--cyan); transform: skewX(2deg); }
+    95% { text-shadow: 3px 0 var(--cyan), -3px 0 var(--yellow); transform: skewX(0); }
+    97% { text-shadow: none; transform: skewY(0.5deg); }
+  }
+
+  .hero-subtitle {
+    font-family: var(--font-mono);
+    font-size: clamp(14px, 2vw, 20px);
+    color: var(--yellow);
+    margin-top: 24px;
+    margin-bottom: 40px;
+    letter-spacing: 2px;
+    font-weight: 500;
+  }
+
+  .hero-cta {
+    background: var(--yellow);
+    color: var(--black);
+    border: var(--border-thick);
+    padding: 18px 40px;
+    font-size: 18px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    box-shadow: var(--shadow-lg);
+    transition: transform 0.1s, box-shadow 0.1s;
+    display: inline-block;
+    position: relative;
+    z-index: 1;
+  }
+
+  .hero-cta:hover { transform: translate(-3px, -3px); box-shadow: 9px 9px 0 var(--yellow); background: var(--cyan); }
+  .hero-cta:active { transform: translate(0,0); box-shadow: none; }
+
+  .hero-updated {
+    font-family: var(--font-mono);
+    font-size: 11px;
+    color: #555;
+    margin-top: 40px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+  }
+
+  .hero-bg-text {
+    position: absolute;
+    top: 50%;
+    right: -20px;
+    transform: translateY(-50%) rotate(90deg);
+    font-size: clamp(100px, 20vw, 300px);
+    font-weight: 700;
+    color: rgba(255,255,255,0.04);
+    letter-spacing: -10px;
+    pointer-events: none;
+    user-select: none;
+    white-space: nowrap;
+  }
+
+  /* ─── TICKER ────────────────────────────────────────────── */
+  .ticker-wrap {
+    width: 100%;
+    background: var(--yellow);
+    border-top: var(--border-thick);
+    overflow: hidden;
+    padding: 12px 0;
+    margin-top: 60px;
+  }
+
+  .ticker-track {
+    display: flex;
+    width: max-content;
+    animation: ticker 25s linear infinite;
+  }
+
+  .ticker-item {
+    font-family: var(--font-mono);
+    font-size: 14px;
+    font-weight: 700;
+    color: var(--black);
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    padding: 0 24px;
+    white-space: nowrap;
+  }
+
+  .ticker-item::after {
+    content: "·";
+    margin-left: 24px;
+    color: var(--pink);
+  }
+
+  @keyframes ticker {
+    from { transform: translateX(0); }
+    to { transform: translateX(-50%); }
+  }
+
+  /* ─── FILTER BAR ────────────────────────────────────────── */
+  #filter-bar {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background: var(--black);
+    border-bottom: var(--border-thick);
+    padding: 16px 40px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 16px;
+  }
+
+  .filter-label {
+    font-family: var(--font-mono);
+    font-size: 11px;
+    color: #888;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+  }
+
+  #state-select {
+    background: var(--yellow);
+    border: var(--border);
+    border-color: var(--yellow);
+    color: var(--black);
+    font-family: var(--font-mono);
+    font-size: 13px;
+    font-weight: 700;
+    padding: 10px 16px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    box-shadow: var(--shadow);
+    appearance: none;
+    cursor: pointer;
+    transition: background 0.2s;
+    min-width: 200px;
+  }
+
+  #state-select.flash { background: var(--cyan); }
+
+  .filter-pills {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+  }
+
+  .pill {
+    background: transparent;
+    border: 3px solid var(--white);
+    color: var(--white);
+    font-family: var(--font-mono);
+    font-size: 12px;
+    font-weight: 700;
+    padding: 8px 16px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: all 0.1s;
+    box-shadow: 3px 3px 0 #444;
+  }
+
+  .pill:hover { background: var(--white); color: var(--black); transform: translate(-1px,-1px); box-shadow: 4px 4px 0 #888; }
+  .pill.active { background: var(--yellow); border-color: var(--yellow); color: var(--black); box-shadow: 3px 3px 0 var(--yellow); }
+
+  #results-counter {
+    font-family: var(--font-mono);
+    font-size: 12px;
+    color: var(--cyan);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-left: auto;
+    white-space: nowrap;
+  }
+
+  /* ─── EVENTS SECTION ─────────────────────────────────────── */
+  #events-section {
+    padding: 40px;
+    background: var(--white);
+    border-bottom: var(--border-thick);
+  }
+
+  .section-header {
+    display: flex;
+    align-items: baseline;
+    gap: 20px;
+    margin-bottom: 32px;
+    border-bottom: var(--border-thick);
+    padding-bottom: 16px;
+  }
+
+  .section-title {
+    font-size: clamp(28px, 5vw, 48px);
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: -2px;
+  }
+
+  .section-tag {
+    font-family: var(--font-mono);
+    font-size: 12px;
+    background: var(--black);
+    color: var(--yellow);
+    padding: 4px 10px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+  }
+
+  /* ─── EVENTS GRID ────────────────────────────────────────── */
+  #events-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0;
+    border: var(--border-thick);
+  }
+
+  @media (max-width: 900px) { #events-grid { grid-template-columns: repeat(2, 1fr); } }
+  @media (max-width: 600px) { #events-grid { grid-template-columns: 1fr; } }
+
+  .event-card {
+    border-right: var(--border);
+    border-bottom: var(--border);
+    padding: 24px;
+    background: var(--white);
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    transition: background 0.1s, transform 0.1s;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .event-card:hover {
+    background: #f8f8f8;
+    z-index: 2;
+    box-shadow: var(--shadow-lg);
+    transform: translate(-2px, -2px);
+  }
+
+  .event-card:nth-child(3n) { border-right: none; }
+
+  .card-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 8px;
+    flex-wrap: wrap;
+  }
+
+  .badge {
+    font-family: var(--font-mono);
+    font-size: 10px;
+    font-weight: 700;
+    padding: 4px 10px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    border: 2px solid var(--black);
+    flex-shrink: 0;
+  }
+
+  .badge-hackathon { background: var(--black); color: var(--yellow); border-color: var(--black); }
+  .badge-workshop { background: var(--pink); color: var(--white); border-color: var(--black); }
+  .badge-bootcamp { background: var(--cyan); color: var(--black); border-color: var(--black); }
+  .badge-online { background: var(--white); color: var(--black); border: 2px solid var(--black); }
+
+  .source-badge {
+    font-family: var(--font-mono);
+    font-size: 9px;
+    font-weight: 700;
+    padding: 3px 8px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    background: var(--white);
+    border: 1px solid #ccc;
+    color: #444;
+  }
+
+  .card-title {
+    font-size: 18px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: -0.5px;
+    line-height: 1.1;
+  }
+
+  .card-meta {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+  }
+
+  .card-date {
+    font-family: var(--font-mono);
+    font-size: 12px;
+    font-weight: 700;
+    color: var(--black);
+    letter-spacing: 1px;
+  }
+
+  .card-location {
+    font-family: var(--font-mono);
+    font-size: 11px;
+    color: #555;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+
+  .card-desc {
+    font-size: 13px;
+    line-height: 1.5;
+    color: #333;
+    flex: 1;
+  }
+
+  .card-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+  }
+
+  .tag {
+    font-family: var(--font-mono);
+    font-size: 9px;
+    font-weight: 700;
+    padding: 2px 8px;
+    border: 1px solid #ccc;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: #555;
+  }
+
+  .prize-badge {
+    font-family: var(--font-mono);
+    font-size: 11px;
+    font-weight: 700;
+    background: var(--yellow);
+    border: 2px solid var(--black);
+    padding: 3px 10px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: var(--black);
+    display: inline-block;
+  }
+
+  .card-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 8px;
+    flex-wrap: wrap;
+    margin-top: auto;
+    padding-top: 12px;
+    border-top: 2px solid var(--black);
+  }
+
+  .register-btn {
+    background: var(--black);
+    color: var(--white);
+    border: var(--border);
+    padding: 10px 20px;
+    font-size: 13px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    box-shadow: var(--shadow);
+    transition: all 0.1s;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+  }
+
+  .register-btn .arrow { display: inline-block; transition: transform 0.2s; }
+  .register-btn:hover { background: var(--yellow); color: var(--black); transform: translate(-2px,-2px); box-shadow: 6px 6px 0 #000; }
+  .register-btn:hover .arrow { transform: translateX(4px); }
+  .register-btn:active { transform: translate(0,0); box-shadow: none; }
+
+  /* ─── EMPTY STATE ────────────────────────────────────────── */
+  #empty-state {
+    display: none;
+    padding: 80px 40px;
+    text-align: center;
+    border: var(--border-thick);
+  }
+
+  #empty-state h2 {
+    font-size: clamp(32px, 6vw, 72px);
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: -3px;
+    color: var(--black);
+    margin-bottom: 16px;
+  }
+
+  #empty-state p {
+    font-family: var(--font-mono);
+    font-size: 14px;
+    color: #555;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+  }
+
+  /* ─── PLATFORM DIRECTORY ─────────────────────────────────── */
+  #platforms {
+    background: var(--yellow);
+    border-bottom: var(--border-thick);
+    padding: 32px 40px;
+  }
+
+  .platform-head {
+    font-family: var(--font-mono);
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    color: var(--black);
+    margin-bottom: 20px;
+    opacity: 0.6;
+  }
+
+  .platform-strip {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0;
+    border: var(--border-thick);
+  }
+
+  .platform-item {
+    flex: 1;
+    min-width: 140px;
+    padding: 20px 24px;
+    border-right: var(--border);
+    background: var(--black);
+    color: var(--white);
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    transition: background 0.15s, color 0.15s;
+    text-align: left;
+  }
+
+  .platform-item:last-child { border-right: none; }
+  .platform-item:hover { background: var(--white); color: var(--black); }
+
+  .platform-name {
+    font-family: var(--font-mono);
+    font-size: 14px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+  }
+
+  .platform-url {
+    font-family: var(--font-mono);
+    font-size: 10px;
+    opacity: 0.5;
+    text-transform: lowercase;
+    letter-spacing: 1px;
+  }
+
+  .platform-arrow {
+    font-size: 18px;
+    margin-top: 8px;
+    transition: transform 0.2s;
+  }
+
+  .platform-item:hover .platform-arrow { transform: translate(4px, -4px); }
+
+  /* ─── FOOTER ─────────────────────────────────────────────── */
+  #footer {
+    background: var(--black);
+    color: var(--white);
+    padding: 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+
+  .footer-text {
+    font-family: var(--font-mono);
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--yellow);
+  }
+
+  .footer-sub {
+    font-family: var(--font-mono);
+    font-size: 11px;
+    color: #555;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-top: 6px;
+  }
+
+  .footer-mark {
+    font-family: var(--font-head);
+    font-size: 36px;
+    font-weight: 700;
+    color: var(--white);
+    opacity: 0.08;
+    letter-spacing: -2px;
+    user-select: none;
+  }
+
+  /* ─── RESPONSIVE ─────────────────────────────────────────── */
+  @media (max-width: 768px) {
+    #hero { padding: 40px 20px 0; }
+    #filter-bar { padding: 12px 20px; flex-direction: column; align-items: flex-start; }
+    #results-counter { margin-left: 0; }
+    #events-section { padding: 24px 20px; }
+    #platforms { padding: 24px 20px; }
+    #footer { padding: 24px 20px; }
+    .event-card:nth-child(3n) { border-right: var(--border); }
+    .event-card:nth-child(2n) { border-right: none; }
+  }
+
+  @media (max-width: 600px) {
+    .event-card:nth-child(2n) { border-right: var(--border); }
+    .event-card { border-right: none !important; }
+    .platform-strip { flex-direction: column; }
+    .platform-item { border-right: none; border-bottom: var(--border); }
+    .platform-item:last-child { border-bottom: none; }
+  }
+
+  /* ─── SCROLLBAR ──────────────────────────────────────────── */
+  ::-webkit-scrollbar { width: 8px; }
+  ::-webkit-scrollbar-track { background: var(--black); }
+  ::-webkit-scrollbar-thumb { background: var(--yellow); border: 1px solid var(--black); }
+</style>
+</head>
+
+<body>
+
+<!-- ═══════════ HERO ═══════════ -->
+<section id="hero">
+  <div class="hero-bg-text">HACK</div>
+  <div class="hero-tag">// EST. 2025 · INDIA'S STUDENT TECH HUB</div>
+  <h1 class="hero-title">HACK<span class="slash">//</span>ZONE</h1>
+  <p class="hero-subtitle">Find Hackathons · Workshops · Bootcamps</p>
+  <a href="#events-section" class="hero-cta">EXPLORE NOW →</a>
+  <div class="hero-updated" id="hero-updated"></div>
+
+  <div class="ticker-wrap">
+    <div class="ticker-track" id="ticker-track"></div>
+  </div>
+</section>
+
+<!-- ═══════════ FILTER BAR ═══════════ -->
+<div id="filter-bar">
+  <span class="filter-label">Location:</span>
+  <select id="state-select">
+    <option value="ALL">📍 ALL STATES</option>
+    <option value="Online">🌐 ONLINE / VIRTUAL</option>
+    <optgroup label="─── STATES ───">
+      <option value="Andhra Pradesh">Andhra Pradesh</option>
+      <option value="Arunachal Pradesh">Arunachal Pradesh</option>
+      <option value="Assam">Assam</option>
+      <option value="Bihar">Bihar</option>
+      <option value="Chhattisgarh">Chhattisgarh</option>
+      <option value="Goa">Goa</option>
+      <option value="Gujarat">Gujarat</option>
+      <option value="Haryana">Haryana</option>
+      <option value="Himachal Pradesh">Himachal Pradesh</option>
+      <option value="Jharkhand">Jharkhand</option>
+      <option value="Karnataka">Karnataka</option>
+      <option value="Kerala">Kerala</option>
+      <option value="Madhya Pradesh">Madhya Pradesh</option>
+      <option value="Maharashtra">Maharashtra</option>
+      <option value="Manipur">Manipur</option>
+      <option value="Meghalaya">Meghalaya</option>
+      <option value="Mizoram">Mizoram</option>
+      <option value="Nagaland">Nagaland</option>
+      <option value="Odisha">Odisha</option>
+      <option value="Punjab">Punjab</option>
+      <option value="Rajasthan">Rajasthan</option>
+      <option value="Sikkim">Sikkim</option>
+      <option value="Tamil Nadu">Tamil Nadu</option>
+      <option value="Telangana">Telangana</option>
+      <option value="Tripura">Tripura</option>
+      <option value="Uttar Pradesh">Uttar Pradesh</option>
+      <option value="Uttarakhand">Uttarakhand</option>
+      <option value="West Bengal">West Bengal</option>
+    </optgroup>
+    <optgroup label="─── UTs ───">
+      <option value="Delhi">Delhi</option>
+      <option value="J&K">Jammu & Kashmir</option>
+      <option value="Ladakh">Ladakh</option>
+      <option value="Chandigarh">Chandigarh</option>
+      <option value="Puducherry">Puducherry</option>
+    </optgroup>
+  </select>
+
+  <div class="filter-pills">
+    <button class="pill active" data-type="ALL">ALL</button>
+    <button class="pill" data-type="hackathon">HACKATHON</button>
+    <button class="pill" data-type="workshop">WORKSHOP</button>
+    <button class="pill" data-type="bootcamp">BOOTCAMP</button>
+  </div>
+
+  <div id="results-counter">SHOWING — EVENTS</div>
+</div>
+
+<!-- ═══════════ EVENTS SECTION ═══════════ -->
+<section id="events-section">
+  <div class="section-header">
+    <h2 class="section-title">EVENTS</h2>
+    <span class="section-tag">// LIVE LISTINGS</span>
+  </div>
+  <div id="events-grid"></div>
+  <div id="empty-state">
+    <h2 id="empty-state-title">NO EVENTS FOUND</h2>
+    <p>Try a different state or filter combo</p>
+  </div>
+</section>
+
+<!-- ═══════════ PLATFORM DIRECTORY ═══════════ -->
+<section id="platforms">
+  <div class="platform-head">// SOURCE PLATFORMS — WHERE EVENTS COME FROM</div>
+  <div class="platform-strip">
+    <a href="https://hack2skill.com" target="_blank" class="platform-item">
+      <div class="platform-name">Hack2Skill</div>
+      <div class="platform-url">hack2skill.com</div>
+      <div class="platform-arrow">↗</div>
+    </a>
+    <a href="https://unstop.com" target="_blank" class="platform-item">
+      <div class="platform-name">Unstop</div>
+      <div class="platform-url">unstop.com</div>
+      <div class="platform-arrow">↗</div>
+    </a>
+    <a href="https://hackerearth.com" target="_blank" class="platform-item">
+      <div class="platform-name">HackerEarth</div>
+      <div class="platform-url">hackerearth.com</div>
+      <div class="platform-arrow">↗</div>
+    </a>
+    <a href="https://lu.ma" target="_blank" class="platform-item">
+      <div class="platform-name">Luma</div>
+      <div class="platform-url">lu.ma</div>
+      <div class="platform-arrow">↗</div>
+    </a>
+    <a href="https://openhackathons.org" target="_blank" class="platform-item">
+      <div class="platform-name">OpenHackathons</div>
+      <div class="platform-url">openhackathons.org</div>
+      <div class="platform-arrow">↗</div>
+    </a>
+  </div>
+</section>
+
+<!-- ═══════════ FOOTER ═══════════ -->
+<footer id="footer">
+  <div>
+    <div class="footer-text">HACK//ZONE © 2025</div>
+    <div class="footer-sub">Built for students. By students.</div>
+  </div>
+  <div class="footer-mark">H//Z</div>
+</footer>
+
+<script>
+/* ═══════════════════════════════════════════════
+   EVENT DATA — 28 realistic mock events
+═══════════════════════════════════════════════ */
+const EVENTS = [
+  {
+    id: 1,
+    title: "HackBombay 9.0",
+    type: "hackathon",
+    date: "2025-07-12",
+    endDate: "2025-07-13",
+    city: "Mumbai",
+    state: "Maharashtra",
+    description: "48-hour flagship hackathon at IIT Bombay. Build solutions for climate, fintech, and health. Open to all students.",
+    registrationUrl: "https://unstop.com",
+    sourcePlatform: "Unstop",
+    isOnline: false,
+    prize: "₹5,00,000",
+    tags: ["AI/ML", "Climate", "FinTech"]
+  },
+  {
+    id: 2,
+    title: "Smart India Hackathon – Maharashtra Node",
+    type: "hackathon",
+    date: "2025-08-01",
+    endDate: "2025-08-03",
+    city: "Pune",
+    state: "Maharashtra",
+    description: "Government-backed 36-hour hackathon solving real-world problem statements from central ministries and PSUs.",
+    registrationUrl: "https://hack2skill.com",
+    sourcePlatform: "Hack2Skill",
+    isOnline: false,
+    prize: "₹1,00,000",
+    tags: ["GovTech", "IoT", "Healthcare"]
+  },
+  {
+    id: 3,
+    title: "DevSprint: Web3 Edition",
+    type: "hackathon",
+    date: "2025-07-19",
+    endDate: "2025-07-20",
+    city: "Bangalore",
+    state: "Karnataka",
+    description: "India's biggest Web3 student hackathon. Build dApps, DeFi tools, and NFT projects. Mentors from Polygon, Solana Foundation.",
+    registrationUrl: "https://hackerearth.com",
+    sourcePlatform: "HackerEarth",
+    isOnline: false,
+    prize: "₹3,00,000",
+    tags: ["Web3", "Blockchain", "DeFi"]
+  },
+  {
+    id: 4,
+    title: "AI/ML Fundamentals Bootcamp",
+    type: "bootcamp",
+    date: "2025-07-07",
+    endDate: "2025-08-11",
+    city: "Online",
+    state: "Online",
+    description: "6-week intensive bootcamp covering Python, NumPy, ML algorithms, and deploying models with FastAPI. Certificate on completion.",
+    registrationUrl: "https://openhackathons.org",
+    sourcePlatform: "OpenHackathons",
+    isOnline: true,
+    prize: null,
+    tags: ["Python", "ML", "FastAPI"]
+  },
+  {
+    id: 5,
+    title: "React & Next.js Workshop",
+    type: "workshop",
+    date: "2025-07-05",
+    endDate: "2025-07-05",
+    city: "Delhi",
+    state: "Delhi",
+    description: "Full-day hands-on workshop on React 18 and Next.js 14 App Router. Build and deploy a production-ready web app.",
+    registrationUrl: "https://lu.ma",
+    sourcePlatform: "Luma",
+    isOnline: false,
+    prize: null,
+    tags: ["React", "Next.js", "Frontend"]
+  },
+  {
+    id: 6,
+    title: "CodeFest Hyderabad 2025",
+    type: "hackathon",
+    date: "2025-07-26",
+    endDate: "2025-07-27",
+    city: "Hyderabad",
+    state: "Telangana",
+    description: "24-hour hackathon organized by IIIT-H students. Tracks: EdTech, HealthTech, and Open Innovation.",
+    registrationUrl: "https://unstop.com",
+    sourcePlatform: "Unstop",
+    isOnline: false,
+    prize: "₹2,00,000",
+    tags: ["EdTech", "HealthTech", "Open"]
+  },
+  {
+    id: 7,
+    title: "Cloud Computing Bootcamp – AWS Track",
+    type: "bootcamp",
+    date: "2025-07-14",
+    endDate: "2025-08-18",
+    city: "Online",
+    state: "Online",
+    description: "5-week bootcamp with hands-on AWS labs. Covers EC2, S3, Lambda, RDS, and prepares you for AWS Cloud Practitioner exam.",
+    registrationUrl: "https://openhackathons.org",
+    sourcePlatform: "OpenHackathons",
+    isOnline: true,
+    prize: null,
+    tags: ["AWS", "Cloud", "DevOps"]
+  },
+  {
+    id: 8,
+    title: "UX Design Sprint – Chennai",
+    type: "workshop",
+    date: "2025-07-12",
+    endDate: "2025-07-12",
+    city: "Chennai",
+    state: "Tamil Nadu",
+    description: "One-day Figma-based UX design sprint. Learn user research, wireframing, and prototyping. No design experience needed.",
+    registrationUrl: "https://lu.ma",
+    sourcePlatform: "Luma",
+    isOnline: false,
+    prize: null,
+    tags: ["UX", "Figma", "Design"]
+  },
+  {
+    id: 9,
+    title: "HackKolkata Urban Tech",
+    type: "hackathon",
+    date: "2025-08-09",
+    endDate: "2025-08-10",
+    city: "Kolkata",
+    state: "West Bengal",
+    description: "Build smart city solutions for traffic, waste management, and public safety. Co-organized by Jadavpur University.",
+    registrationUrl: "https://hack2skill.com",
+    sourcePlatform: "Hack2Skill",
+    isOnline: false,
+    prize: "₹1,50,000",
+    tags: ["SmartCity", "IoT", "Sustainability"]
+  },
+  {
+    id: 10,
+    title: "Open Source Contribution Workshop",
+    type: "workshop",
+    date: "2025-07-08",
+    endDate: "2025-07-08",
+    city: "Online",
+    state: "Online",
+    description: "Learn how to contribute to GitHub OSS projects. Covers Git workflows, PR etiquette, issue triaging, and finding good first issues.",
+    registrationUrl: "https://lu.ma",
+    sourcePlatform: "Luma",
+    isOnline: true,
+    prize: null,
+    tags: ["OpenSource", "Git", "GitHub"]
+  },
+  {
+    id: 11,
+    title: "TechnoJam Ahmedabad",
+    type: "hackathon",
+    date: "2025-08-16",
+    endDate: "2025-08-17",
+    city: "Ahmedabad",
+    state: "Gujarat",
+    description: "36-hour student hackathon at DAIICT. Problem domains: AgriTech, Rural Connectivity, and Financial Inclusion.",
+    registrationUrl: "https://hackerearth.com",
+    sourcePlatform: "HackerEarth",
+    isOnline: false,
+    prize: "₹80,000",
+    tags: ["AgriTech", "FinInclusion", "Rural"]
+  },
+  {
+    id: 12,
+    title: "Full Stack Dev Bootcamp",
+    type: "bootcamp",
+    date: "2025-07-21",
+    endDate: "2025-09-01",
+    city: "Bangalore",
+    state: "Karnataka",
+    description: "6-week full-stack bootcamp: HTML/CSS/JS, Node, Express, MongoDB, React. Build 3 portfolio projects. Job-ready curriculum.",
+    registrationUrl: "https://unstop.com",
+    sourcePlatform: "Unstop",
+    isOnline: false,
+    prize: null,
+    tags: ["MERN", "FullStack", "Portfolio"]
+  },
+  {
+    id: 13,
+    title: "DataHack 2025 – National Finals",
+    type: "hackathon",
+    date: "2025-08-23",
+    endDate: "2025-08-24",
+    city: "Delhi",
+    state: "Delhi",
+    description: "India's premier data science hackathon. Compete on real datasets from healthcare, finance, and government sectors.",
+    registrationUrl: "https://hackerearth.com",
+    sourcePlatform: "HackerEarth",
+    isOnline: false,
+    prize: "₹4,00,000",
+    tags: ["DataScience", "ML", "Analytics"]
+  },
+  {
+    id: 14,
+    title: "Cybersecurity Essentials Workshop",
+    type: "workshop",
+    date: "2025-07-19",
+    endDate: "2025-07-19",
+    city: "Online",
+    state: "Online",
+    description: "Learn ethical hacking basics, OWASP Top 10, network security, and CTF techniques. Beginner-friendly with live demos.",
+    registrationUrl: "https://hack2skill.com",
+    sourcePlatform: "Hack2Skill",
+    isOnline: true,
+    prize: null,
+    tags: ["CyberSec", "CTF", "Ethical Hacking"]
+  },
+  {
+    id: 15,
+    title: "Pink City Hack – Jaipur",
+    type: "hackathon",
+    date: "2025-08-30",
+    endDate: "2025-08-31",
+    city: "Jaipur",
+    state: "Rajasthan",
+    description: "Heritage + Technology hackathon. Build digital solutions for cultural preservation, tourism tech, and regional language AI.",
+    registrationUrl: "https://unstop.com",
+    sourcePlatform: "Unstop",
+    isOnline: false,
+    prize: "₹1,20,000",
+    tags: ["Heritage", "TourismTech", "NLP"]
+  },
+  {
+    id: 16,
+    title: "Mobile App Dev Bootcamp",
+    type: "bootcamp",
+    date: "2025-07-28",
+    endDate: "2025-08-25",
+    city: "Online",
+    state: "Online",
+    description: "4-week bootcamp on React Native. Build cross-platform iOS/Android apps. Topics: navigation, state, APIs, and App Store deployment.",
+    registrationUrl: "https://openhackathons.org",
+    sourcePlatform: "OpenHackathons",
+    isOnline: true,
+    prize: null,
+    tags: ["ReactNative", "Mobile", "iOS", "Android"]
+  },
+  {
+    id: 17,
+    title: "MumbaiHacks – Climate Edition",
+    type: "hackathon",
+    date: "2025-09-06",
+    endDate: "2025-09-07",
+    city: "Mumbai",
+    state: "Maharashtra",
+    description: "36-hour climate-focused hackathon. Build solutions for carbon tracking, renewable energy optimization, and eco-behaviour apps.",
+    registrationUrl: "https://lu.ma",
+    sourcePlatform: "Luma",
+    isOnline: false,
+    prize: "₹2,50,000",
+    tags: ["Climate", "GreenTech", "Sustainability"]
+  },
+  {
+    id: 18,
+    title: "DSA & CP Bootcamp",
+    type: "bootcamp",
+    date: "2025-07-10",
+    endDate: "2025-08-07",
+    city: "Online",
+    state: "Online",
+    description: "4-week competitive programming bootcamp. Master arrays, trees, graphs, DP, and segment trees. Daily problem sets + live doubt sessions.",
+    registrationUrl: "https://hackerearth.com",
+    sourcePlatform: "HackerEarth",
+    isOnline: true,
+    prize: null,
+    tags: ["DSA", "CP", "Algorithms"]
+  },
+  {
+    id: 19,
+    title: "InnoHack Pune 2025",
+    type: "hackathon",
+    date: "2025-09-13",
+    endDate: "2025-09-14",
+    city: "Pune",
+    state: "Maharashtra",
+    description: "Innovation hackathon by Symbiosis Institute. Tracks: HealthTech, EdTech, and Smart Mobility. Investors in the jury panel.",
+    registrationUrl: "https://hack2skill.com",
+    sourcePlatform: "Hack2Skill",
+    isOnline: false,
+    prize: "₹1,80,000",
+    tags: ["HealthTech", "EdTech", "Mobility"]
+  },
+  {
+    id: 20,
+    title: "Docker & Kubernetes Workshop",
+    type: "workshop",
+    date: "2025-07-26",
+    endDate: "2025-07-26",
+    city: "Bangalore",
+    state: "Karnataka",
+    description: "Hands-on session on containerization with Docker and orchestration with Kubernetes. Build and deploy a microservices app.",
+    registrationUrl: "https://lu.ma",
+    sourcePlatform: "Luma",
+    isOnline: false,
+    prize: null,
+    tags: ["Docker", "Kubernetes", "DevOps"]
+  },
+  {
+    id: 21,
+    title: "HackNITK – Mangalore",
+    type: "hackathon",
+    date: "2025-09-20",
+    endDate: "2025-09-21",
+    city: "Mangalore",
+    state: "Karnataka",
+    description: "NIT Karnataka's annual 30-hour student hackathon. Problem statements from industry partners in logistics, retail, and energy.",
+    registrationUrl: "https://unstop.com",
+    sourcePlatform: "Unstop",
+    isOnline: false,
+    prize: "₹2,00,000",
+    tags: ["Logistics", "Retail", "Energy"]
+  },
+  {
+    id: 22,
+    title: "Generative AI Workshop Series",
+    type: "workshop",
+    date: "2025-08-02",
+    endDate: "2025-08-02",
+    city: "Online",
+    state: "Online",
+    description: "2-day virtual workshop on building with LLMs. Covers prompt engineering, LangChain, RAG, and deploying AI chatbots.",
+    registrationUrl: "https://hack2skill.com",
+    sourcePlatform: "Hack2Skill",
+    isOnline: true,
+    prize: null,
+    tags: ["GenAI", "LLM", "LangChain", "RAG"]
+  },
+  {
+    id: 23,
+    title: "Kochi Blockchain Summit Hackathon",
+    type: "hackathon",
+    date: "2025-09-27",
+    endDate: "2025-09-28",
+    city: "Kochi",
+    state: "Kerala",
+    description: "Build blockchain-based solutions for supply chain transparency, land records, and cross-border payments.",
+    registrationUrl: "https://hackerearth.com",
+    sourcePlatform: "HackerEarth",
+    isOnline: false,
+    prize: "₹1,50,000",
+    tags: ["Blockchain", "SupplyChain", "FinTech"]
+  },
+  {
+    id: 24,
+    title: "Git & GitHub for Beginners",
+    type: "workshop",
+    date: "2025-07-15",
+    endDate: "2025-07-15",
+    city: "Hyderabad",
+    state: "Telangana",
+    description: "Beginner-friendly hands-on workshop. Learn version control from scratch: commits, branches, merges, and open source collaboration.",
+    registrationUrl: "https://lu.ma",
+    sourcePlatform: "Luma",
+    isOnline: false,
+    prize: null,
+    tags: ["Git", "GitHub", "Beginner"]
+  },
+  {
+    id: 25,
+    title: "National Startup Hackathon 2025",
+    type: "hackathon",
+    date: "2025-10-04",
+    endDate: "2025-10-06",
+    city: "Delhi",
+    state: "Delhi",
+    description: "72-hour national-level hackathon. Top 10 teams get incubation support. Backed by Startup India and NASSCOM.",
+    registrationUrl: "https://unstop.com",
+    sourcePlatform: "Unstop",
+    isOnline: false,
+    prize: "₹10,00,000",
+    tags: ["Startup", "Incubation", "Nationwide"]
+  },
+  {
+    id: 26,
+    title: "VLSI & Embedded Systems Bootcamp",
+    type: "bootcamp",
+    date: "2025-08-04",
+    endDate: "2025-09-01",
+    city: "Chennai",
+    state: "Tamil Nadu",
+    description: "4-week hardware bootcamp. Topics: Arduino, Raspberry Pi, FPGA basics, PCB design, and sensor interfacing. Kits included.",
+    registrationUrl: "https://openhackathons.org",
+    sourcePlatform: "OpenHackathons",
+    isOnline: false,
+    prize: null,
+    tags: ["Hardware", "Embedded", "FPGA"]
+  },
+  {
+    id: 27,
+    title: "HackRajasthan – Desert Edition",
+    type: "hackathon",
+    date: "2025-10-11",
+    endDate: "2025-10-12",
+    city: "Jodhpur",
+    state: "Rajasthan",
+    description: "Desert-themed hackathon at MBM University. Focus on water conservation tech, rural healthcare, and solar energy solutions.",
+    registrationUrl: "https://hack2skill.com",
+    sourcePlatform: "Hack2Skill",
+    isOnline: false,
+    prize: "₹75,000",
+    tags: ["WaterTech", "Solar", "Rural"]
+  },
+  {
+    id: 28,
+    title: "BuildWithAI – Open Online Hackathon",
+    type: "hackathon",
+    date: "2025-07-25",
+    endDate: "2025-07-27",
+    city: "Online",
+    state: "Online",
+    description: "72-hour online hackathon for building AI-powered products. Open to all students. Mentors from Google, Microsoft, and OpenAI.",
+    registrationUrl: "https://hackerearth.com",
+    sourcePlatform: "HackerEarth",
+    isOnline: true,
+    prize: "₹5,00,000",
+    tags: ["AI", "Product", "OpenSource"]
+  }
+];
+
+/* ═══════════════════════════════════════════════
+   STATE + FILTER LOGIC
+═══════════════════════════════════════════════ */
+let selectedState = localStorage.getItem('hackzone_state') || 'ALL';
+let selectedType = 'ALL';
+
+function formatDate(iso) {
+  const d = new Date(iso);
+  return d.toLocaleDateString('en-IN', { day: 'numeric', month: 'short', year: 'numeric' });
+}
+
+function formatDateRange(start, end) {
+  const s = new Date(start), e = new Date(end);
+  if (start === end) return formatDate(start);
+  return `${formatDate(start)} – ${formatDate(end)}`;
+}
+
+function getFilteredEvents() {
+  return EVENTS
+    .filter(ev => {
+      // Online events always show
+      const stateMatch = selectedState === 'ALL' || ev.isOnline || ev.state === selectedState;
+      const typeMatch = selectedType === 'ALL' || ev.type === selectedType;
+      return stateMatch && typeMatch;
+    })
+    .sort((a, b) => new Date(a.date) - new Date(b.date));
+}
+
+function renderCard(ev) {
+  const badgeClass = `badge-${ev.type}`;
+  const onlineBadge = ev.isOnline ? `<span class="badge badge-online">ONLINE</span>` : '';
+  const prizeBadge = ev.prize ? `<span class="prize-badge">🏆 ${ev.prize}</span>` : '';
+  const tags = ev.tags.map(t => `<span class="tag">#${t}</span>`).join('');
+
+  return `
+    <div class="event-card">
+      <div class="card-top">
+        <span class="badge ${badgeClass}">${ev.type.toUpperCase()}</span>
+        <span class="source-badge">${ev.sourcePlatform}</span>
+        ${onlineBadge}
+      </div>
+      <div class="card-title">${ev.title}</div>
+      <div class="card-meta">
+        <div class="card-date">📅 ${formatDateRange(ev.date, ev.endDate)}</div>
+        <div class="card-location">📍 ${ev.isOnline ? 'ONLINE / VIRTUAL' : `${ev.city}, ${ev.state}`}</div>
+      </div>
+      <div class="card-desc">${ev.description}</div>
+      <div class="card-tags">${tags}</div>
+      <div class="card-footer">
+        ${prizeBadge}
+        <a href="${ev.registrationUrl}" target="_blank" class="register-btn">
+          REGISTER <span class="arrow">→</span>
+        </a>
+      </div>
+    </div>
+  `;
+}
+
+function renderEvents() {
+  const filtered = getFilteredEvents();
+  const grid = document.getElementById('events-grid');
+  const empty = document.getElementById('empty-state');
+  const counter = document.getElementById('results-counter');
+
+  if (filtered.length === 0) {
+    grid.innerHTML = '';
+    grid.style.display = 'none';
+    empty.style.display = 'block';
+    document.getElementById('empty-state-title').textContent =
+      `NO EVENTS FOUND IN ${selectedState === 'ALL' ? 'ANY STATE' : selectedState.toUpperCase()}`;
+    counter.textContent = 'SHOWING 0 EVENTS';
+  } else {
+    grid.style.display = 'grid';
+    empty.style.display = 'none';
+    grid.innerHTML = filtered.map(renderCard).join('');
+    const loc = selectedState === 'ALL' ? 'ALL STATES' : selectedState.toUpperCase();
+    counter.textContent = `SHOWING ${filtered.length} EVENTS · ${loc}`;
+  }
+}
+
+/* ═══════════════════════════════════════════════
+   TICKER SETUP
+═══════════════════════════════════════════════ */
+function setupTicker() {
+  const items = ['HACKATHONS', 'WORKSHOPS', 'BOOTCAMPS', 'OPEN SOURCE', 'BUILD', 'SHIP', 'WIN', 'INDIA', 'STUDENTS', 'INNOVATE', 'CODE'];
+  const html = [...items, ...items].map(i => `<span class="ticker-item">${i}</span>`).join('');
+  document.getElementById('ticker-track').innerHTML = html;
+}
+
+/* ═══════════════════════════════════════════════
+   LAST UPDATED
+═══════════════════════════════════════════════ */
+function setupTimestamp() {
+  const el = document.getElementById('hero-updated');
+  const now = new Date();
+  const ts = now.toLocaleDateString('en-IN', { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' });
+  el.textContent = `// LAST UPDATED: ${ts.toUpperCase()}`;
+}
+
+/* ═══════════════════════════════════════════════
+   EVENT LISTENERS
+═══════════════════════════════════════════════ */
+function setupFilters() {
+  // Restore saved state
+  const select = document.getElementById('state-select');
+  select.value = selectedState;
+
+  select.addEventListener('change', () => {
+    selectedState = select.value;
+    localStorage.setItem('hackzone_state', selectedState);
+    // Flash yellow
+    select.classList.add('flash');
+    setTimeout(() => select.classList.remove('flash'), 200);
+    renderEvents();
+  });
+
+  document.querySelectorAll('.pill').forEach(pill => {
+    pill.addEventListener('click', () => {
+      document.querySelectorAll('.pill').forEach(p => p.classList.remove('active'));
+      pill.classList.add('active');
+      selectedType = pill.dataset.type;
+      renderEvents();
+    });
+  });
+}
+
+/* ═══════════════════════════════════════════════
+   INIT
+═══════════════════════════════════════════════ */
+document.addEventListener('DOMContentLoaded', () => {
+  setupTicker();
+  setupTimestamp();
+  setupFilters();
+  renderEvents();
+});
+</script>
+</body>
+</html>
