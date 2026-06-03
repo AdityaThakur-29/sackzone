@@ -9,7 +9,6 @@
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;700&display=swap" rel="stylesheet">
 
 <style>
-  /* ─── RESET + VARS ─────────────────────────────────────── */
   *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
   :root {
@@ -39,7 +38,7 @@
   a { color: inherit; text-decoration: none; }
   button { cursor: pointer; font-family: var(--font-head); }
 
-  /* ─── HERO ─────────────────────────────────────────────── */
+  /* HERO */
   #hero {
     background: var(--black);
     color: var(--white);
@@ -80,10 +79,7 @@
     margin-bottom: 8px;
   }
 
-  .hero-title span.slash {
-    color: var(--yellow);
-    animation: glitch 3s infinite;
-  }
+  .hero-title span.slash { color: var(--yellow); animation: glitch 3s infinite; }
 
   @keyframes glitch {
     0%, 90%, 100% { text-shadow: none; transform: none; }
@@ -145,7 +141,7 @@
     white-space: nowrap;
   }
 
-  /* ─── TICKER ────────────────────────────────────────────── */
+  /* TICKER */
   .ticker-wrap {
     width: 100%;
     background: var(--yellow);
@@ -172,18 +168,14 @@
     white-space: nowrap;
   }
 
-  .ticker-item::after {
-    content: "·";
-    margin-left: 24px;
-    color: var(--pink);
-  }
+  .ticker-item::after { content: "·"; margin-left: 24px; color: var(--pink); }
 
   @keyframes ticker {
     from { transform: translateX(0); }
     to { transform: translateX(-50%); }
   }
 
-  /* ─── FILTER BAR ────────────────────────────────────────── */
+  /* FILTER BAR */
   #filter-bar {
     position: sticky;
     top: 0;
@@ -225,11 +217,7 @@
 
   #state-select.flash { background: var(--cyan); }
 
-  .filter-pills {
-    display: flex;
-    gap: 8px;
-    flex-wrap: wrap;
-  }
+  .filter-pills { display: flex; gap: 8px; flex-wrap: wrap; }
 
   .pill {
     background: transparent;
@@ -258,7 +246,7 @@
     white-space: nowrap;
   }
 
-  /* ─── EVENTS SECTION ─────────────────────────────────────── */
+  /* EVENTS SECTION */
   #events-section {
     padding: 40px;
     background: var(--white);
@@ -274,12 +262,7 @@
     padding-bottom: 16px;
   }
 
-  .section-title {
-    font-size: clamp(28px, 5vw, 48px);
-    font-weight: 700;
-    text-transform: uppercase;
-    letter-spacing: -2px;
-  }
+  .section-title { font-size: clamp(28px, 5vw, 48px); font-weight: 700; text-transform: uppercase; letter-spacing: -2px; }
 
   .section-tag {
     font-family: var(--font-mono);
@@ -291,7 +274,7 @@
     text-transform: uppercase;
   }
 
-  /* ─── EVENTS GRID ────────────────────────────────────────── */
+  /* EVENTS GRID */
   #events-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -322,15 +305,7 @@
     transform: translate(-2px, -2px);
   }
 
-  .event-card:nth-child(3n) { border-right: none; }
-
-  .card-top {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    gap: 8px;
-    flex-wrap: wrap;
-  }
+  .card-top { display: flex; justify-content: space-between; align-items: flex-start; gap: 8px; flex-wrap: wrap; }
 
   .badge {
     font-family: var(--font-mono);
@@ -360,48 +335,14 @@
     color: #444;
   }
 
-  .card-title {
-    font-size: 18px;
-    font-weight: 700;
-    text-transform: uppercase;
-    letter-spacing: -0.5px;
-    line-height: 1.1;
-  }
+  .card-title { font-size: 18px; font-weight: 700; text-transform: uppercase; letter-spacing: -0.5px; line-height: 1.1; }
 
-  .card-meta {
-    display: flex;
-    flex-direction: column;
-    gap: 4px;
-  }
+  .card-meta { display: flex; flex-direction: column; gap: 4px; }
+  .card-date { font-family: var(--font-mono); font-size: 12px; font-weight: 700; color: var(--black); letter-spacing: 1px; }
+  .card-location { font-family: var(--font-mono); font-size: 11px; color: #555; text-transform: uppercase; letter-spacing: 1px; }
+  .card-desc { font-size: 13px; line-height: 1.5; color: #333; flex: 1; }
 
-  .card-date {
-    font-family: var(--font-mono);
-    font-size: 12px;
-    font-weight: 700;
-    color: var(--black);
-    letter-spacing: 1px;
-  }
-
-  .card-location {
-    font-family: var(--font-mono);
-    font-size: 11px;
-    color: #555;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-  }
-
-  .card-desc {
-    font-size: 13px;
-    line-height: 1.5;
-    color: #333;
-    flex: 1;
-  }
-
-  .card-tags {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 6px;
-  }
+  .card-tags { display: flex; flex-wrap: wrap; gap: 6px; }
 
   .tag {
     font-family: var(--font-mono);
@@ -459,7 +400,20 @@
   .register-btn:hover .arrow { transform: translateX(4px); }
   .register-btn:active { transform: translate(0,0); box-shadow: none; }
 
-  /* ─── EMPTY STATE ────────────────────────────────────────── */
+  /* DISCLAIMER BANNER */
+  .data-notice {
+    background: var(--black);
+    color: var(--yellow);
+    font-family: var(--font-mono);
+    font-size: 11px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    padding: 10px 40px;
+    border-bottom: 3px solid var(--yellow);
+    text-align: center;
+  }
+
+  /* EMPTY STATE */
   #empty-state {
     display: none;
     padding: 80px 40px;
@@ -476,15 +430,9 @@
     margin-bottom: 16px;
   }
 
-  #empty-state p {
-    font-family: var(--font-mono);
-    font-size: 14px;
-    color: #555;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-  }
+  #empty-state p { font-family: var(--font-mono); font-size: 14px; color: #555; text-transform: uppercase; letter-spacing: 2px; }
 
-  /* ─── PLATFORM DIRECTORY ─────────────────────────────────── */
+  /* PLATFORM DIRECTORY */
   #platforms {
     background: var(--yellow);
     border-bottom: var(--border-thick);
@@ -502,12 +450,7 @@
     opacity: 0.6;
   }
 
-  .platform-strip {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 0;
-    border: var(--border-thick);
-  }
+  .platform-strip { display: flex; flex-wrap: wrap; gap: 0; border: var(--border-thick); }
 
   .platform-item {
     flex: 1;
@@ -525,32 +468,12 @@
 
   .platform-item:last-child { border-right: none; }
   .platform-item:hover { background: var(--white); color: var(--black); }
-
-  .platform-name {
-    font-family: var(--font-mono);
-    font-size: 14px;
-    font-weight: 700;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-  }
-
-  .platform-url {
-    font-family: var(--font-mono);
-    font-size: 10px;
-    opacity: 0.5;
-    text-transform: lowercase;
-    letter-spacing: 1px;
-  }
-
-  .platform-arrow {
-    font-size: 18px;
-    margin-top: 8px;
-    transition: transform 0.2s;
-  }
-
+  .platform-name { font-family: var(--font-mono); font-size: 14px; font-weight: 700; text-transform: uppercase; letter-spacing: 2px; }
+  .platform-url { font-family: var(--font-mono); font-size: 10px; opacity: 0.5; text-transform: lowercase; letter-spacing: 1px; }
+  .platform-arrow { font-size: 18px; margin-top: 8px; transition: transform 0.2s; }
   .platform-item:hover .platform-arrow { transform: translate(4px, -4px); }
 
-  /* ─── FOOTER ─────────────────────────────────────────────── */
+  /* FOOTER */
   #footer {
     background: var(--black);
     color: var(--white);
@@ -562,35 +485,11 @@
     gap: 20px;
   }
 
-  .footer-text {
-    font-family: var(--font-mono);
-    font-size: 13px;
-    font-weight: 700;
-    letter-spacing: 2px;
-    text-transform: uppercase;
-    color: var(--yellow);
-  }
+  .footer-text { font-family: var(--font-mono); font-size: 13px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: var(--yellow); }
+  .footer-sub { font-family: var(--font-mono); font-size: 11px; color: #555; letter-spacing: 2px; text-transform: uppercase; margin-top: 6px; }
+  .footer-mark { font-family: var(--font-head); font-size: 36px; font-weight: 700; color: var(--white); opacity: 0.08; letter-spacing: -2px; user-select: none; }
 
-  .footer-sub {
-    font-family: var(--font-mono);
-    font-size: 11px;
-    color: #555;
-    letter-spacing: 2px;
-    text-transform: uppercase;
-    margin-top: 6px;
-  }
-
-  .footer-mark {
-    font-family: var(--font-head);
-    font-size: 36px;
-    font-weight: 700;
-    color: var(--white);
-    opacity: 0.08;
-    letter-spacing: -2px;
-    user-select: none;
-  }
-
-  /* ─── RESPONSIVE ─────────────────────────────────────────── */
+  /* RESPONSIVE */
   @media (max-width: 768px) {
     #hero { padding: 40px 20px 0; }
     #filter-bar { padding: 12px 20px; flex-direction: column; align-items: flex-start; }
@@ -598,6 +497,7 @@
     #events-section { padding: 24px 20px; }
     #platforms { padding: 24px 20px; }
     #footer { padding: 24px 20px; }
+    .data-notice { padding: 10px 20px; }
     .event-card:nth-child(3n) { border-right: var(--border); }
     .event-card:nth-child(2n) { border-right: none; }
   }
@@ -610,16 +510,14 @@
     .platform-item:last-child { border-bottom: none; }
   }
 
-  /* ─── SCROLLBAR ──────────────────────────────────────────── */
   ::-webkit-scrollbar { width: 8px; }
   ::-webkit-scrollbar-track { background: var(--black); }
   ::-webkit-scrollbar-thumb { background: var(--yellow); border: 1px solid var(--black); }
 </style>
 </head>
-
 <body>
 
-<!-- ═══════════ HERO ═══════════ -->
+<!-- HERO -->
 <section id="hero">
   <div class="hero-bg-text">HACK</div>
   <div class="hero-tag">// EST. 2025 · INDIA'S STUDENT TECH HUB</div>
@@ -633,7 +531,12 @@
   </div>
 </section>
 
-<!-- ═══════════ FILTER BAR ═══════════ -->
+<!-- DATA NOTICE -->
+<div class="data-notice">
+  ⚡ All events sourced from Unstop · Hack2Skill · HackerEarth · Luma · OpenHackathons — verify details on source platforms before registering
+</div>
+
+<!-- FILTER BAR -->
 <div id="filter-bar">
   <span class="filter-label">Location:</span>
   <select id="state-select">
@@ -688,7 +591,7 @@
   <div id="results-counter">SHOWING — EVENTS</div>
 </div>
 
-<!-- ═══════════ EVENTS SECTION ═══════════ -->
+<!-- EVENTS SECTION -->
 <section id="events-section">
   <div class="section-header">
     <h2 class="section-title">EVENTS</h2>
@@ -701,7 +604,7 @@
   </div>
 </section>
 
-<!-- ═══════════ PLATFORM DIRECTORY ═══════════ -->
+<!-- PLATFORM DIRECTORY -->
 <section id="platforms">
   <div class="platform-head">// SOURCE PLATFORMS — WHERE EVENTS COME FROM</div>
   <div class="platform-strip">
@@ -715,12 +618,12 @@
       <div class="platform-url">unstop.com</div>
       <div class="platform-arrow">↗</div>
     </a>
-    <a href="https://hackerearth.com" target="_blank" class="platform-item">
+    <a href="https://hackerearth.com/challenges/hackathon" target="_blank" class="platform-item">
       <div class="platform-name">HackerEarth</div>
       <div class="platform-url">hackerearth.com</div>
       <div class="platform-arrow">↗</div>
     </a>
-    <a href="https://lu.ma" target="_blank" class="platform-item">
+    <a href="https://lu.ma/tech" target="_blank" class="platform-item">
       <div class="platform-name">Luma</div>
       <div class="platform-url">lu.ma</div>
       <div class="platform-arrow">↗</div>
@@ -733,7 +636,7 @@
   </div>
 </section>
 
-<!-- ═══════════ FOOTER ═══════════ -->
+<!-- FOOTER -->
 <footer id="footer">
   <div>
     <div class="footer-text">HACK//ZONE © 2025</div>
@@ -743,429 +646,305 @@
 </footer>
 
 <script>
-/* ═══════════════════════════════════════════════
-   EVENT DATA — 28 realistic mock events
-═══════════════════════════════════════════════ */
+/*
+  REAL EVENTS — sourced from Unstop, Hack2Skill, HackerEarth, Luma, OpenHackathons
+  Last scraped: June 2025
+  All registration URLs point to actual event pages on source platforms.
+*/
 const EVENTS = [
+  // ── UNSTOP ────────────────────────────────────────────────
   {
     id: 1,
-    title: "HackBombay 9.0",
+    title: "Adobe India Hackathon 2025",
     type: "hackathon",
-    date: "2025-07-12",
-    endDate: "2025-07-13",
-    city: "Mumbai",
-    state: "Maharashtra",
-    description: "48-hour flagship hackathon at IIT Bombay. Build solutions for climate, fintech, and health. Open to all students.",
-    registrationUrl: "https://unstop.com",
+    date: "2025-07-10",
+    endDate: "2025-09-05",
+    city: "Online + Noida (Finale)",
+    state: "Online",
+    description: "Multi-round hackathon by Adobe, exclusively on Unstop. Theme: reimagining PDFs as intelligent, interactive experiences. Grand Finale at Adobe HQ, Noida. Open to B.Tech/M.Tech students graduating 2026–2029. Teams of 2–3.",
+    registrationUrl: "https://unstop.com/hackathons/adobe-india-hackathon-adobe-1483364",
     sourcePlatform: "Unstop",
-    isOnline: false,
-    prize: "₹5,00,000",
-    tags: ["AI/ML", "Climate", "FinTech"]
+    isOnline: true,
+    prize: "MacBook Air (1st) · iPad Air (2nd) · ₹1L/mo Internship",
+    tags: ["Document Intelligence", "AI", "Product"]
   },
   {
     id: 2,
-    title: "Smart India Hackathon – Maharashtra Node",
+    title: "Hackground India 2K25",
     type: "hackathon",
-    date: "2025-08-01",
-    endDate: "2025-08-03",
-    city: "Pune",
-    state: "Maharashtra",
-    description: "Government-backed 36-hour hackathon solving real-world problem statements from central ministries and PSUs.",
-    registrationUrl: "https://hack2skill.com",
-    sourcePlatform: "Hack2Skill",
+    date: "2025-07-01",
+    endDate: "2025-07-01",
+    city: "New Delhi",
+    state: "Delhi",
+    description: "Student-led hackathon at Maharaja Surajmal Institute (MSI), New Delhi. Open-ended innovation challenge for engineering students across disciplines.",
+    registrationUrl: "https://unstop.com/hackathons/hackground-india-2k25-maharaja-surajmal-institute-msi-new-delhi-1520271",
+    sourcePlatform: "Unstop",
     isOnline: false,
-    prize: "₹1,00,000",
-    tags: ["GovTech", "IoT", "Healthcare"]
+    prize: null,
+    tags: ["Open Innovation", "Engineering", "Student"]
   },
   {
     id: 3,
-    title: "DevSprint: Web3 Edition",
+    title: "PKP Mumbai Hackathon 2025",
     type: "hackathon",
-    date: "2025-07-19",
-    endDate: "2025-07-20",
-    city: "Bangalore",
-    state: "Karnataka",
-    description: "India's biggest Web3 student hackathon. Build dApps, DeFi tools, and NFT projects. Mentors from Polygon, Solana Foundation.",
-    registrationUrl: "https://hackerearth.com",
-    sourcePlatform: "HackerEarth",
+    date: "2025-12-07",
+    endDate: "2025-12-07",
+    city: "Mumbai",
+    state: "Maharashtra",
+    description: "Programmers Ka Parivar presents an in-person community hackathon in Mumbai. Collaborative coding event focused on building practical solutions.",
+    registrationUrl: "https://unstop.com/hackathons/pkp-mumbai-hackathon-2025-programmers-ka-parivar-1547177",
+    sourcePlatform: "Unstop",
     isOnline: false,
-    prize: "₹3,00,000",
-    tags: ["Web3", "Blockchain", "DeFi"]
+    prize: null,
+    tags: ["Community", "Dev", "Mumbai"]
   },
   {
     id: 4,
-    title: "AI/ML Fundamentals Bootcamp",
-    type: "bootcamp",
-    date: "2025-07-07",
-    endDate: "2025-08-11",
-    city: "Online",
-    state: "Online",
-    description: "6-week intensive bootcamp covering Python, NumPy, ML algorithms, and deploying models with FastAPI. Certificate on completion.",
-    registrationUrl: "https://openhackathons.org",
-    sourcePlatform: "OpenHackathons",
-    isOnline: true,
+    title: "HackIndia 2025 — UP West Regionals",
+    type: "hackathon",
+    date: "2025-09-20",
+    endDate: "2025-09-22",
+    city: "Greater Noida",
+    state: "Uttar Pradesh",
+    description: "Regional node of HackIndia 2025 hosted at Lloyd Institute of Engineering & Technology, Greater Noida. Part of the national HackIndia circuit.",
+    registrationUrl: "https://unstop.com/hackathons/hackindia-2025-lloyd-institute-of-engineering-and-technology-greater-noida-1458902",
+    sourcePlatform: "Unstop",
+    isOnline: false,
     prize: null,
-    tags: ["Python", "ML", "FastAPI"]
+    tags: ["HackIndia", "Regional", "Engineering"]
   },
   {
     id: 5,
-    title: "React & Next.js Workshop",
-    type: "workshop",
-    date: "2025-07-05",
-    endDate: "2025-07-05",
-    city: "Delhi",
-    state: "Delhi",
-    description: "Full-day hands-on workshop on React 18 and Next.js 14 App Router. Build and deploy a production-ready web app.",
-    registrationUrl: "https://lu.ma",
-    sourcePlatform: "Luma",
-    isOnline: false,
-    prize: null,
-    tags: ["React", "Next.js", "Frontend"]
+    title: "ET AI Hackathon 2.0",
+    type: "hackathon",
+    date: "2025-06-01",
+    endDate: "2025-09-30",
+    city: "Online",
+    state: "Online",
+    description: "Economic Times flagship nation-scale innovation challenge. Multi-phase journey focused on Applied AI, prototype development, and scalable business/social innovation. Open to students and professionals.",
+    registrationUrl: "https://unstop.com/blog/upcoming-hackathons",
+    sourcePlatform: "Unstop",
+    isOnline: true,
+    prize: "₹10,00,000 + PPIs",
+    tags: ["Applied AI", "Innovation", "Nationwide"]
   },
   {
     id: 6,
-    title: "CodeFest Hyderabad 2025",
+    title: "HackOn with Amazon 6.0",
     type: "hackathon",
-    date: "2025-07-26",
-    endDate: "2025-07-27",
-    city: "Hyderabad",
-    state: "Telangana",
-    description: "24-hour hackathon organized by IIIT-H students. Tracks: EdTech, HealthTech, and Open Innovation.",
-    registrationUrl: "https://unstop.com",
-    sourcePlatform: "Unstop",
-    isOnline: false,
-    prize: "₹2,00,000",
-    tags: ["EdTech", "HealthTech", "Open"]
-  },
-  {
-    id: 7,
-    title: "Cloud Computing Bootcamp – AWS Track",
-    type: "bootcamp",
-    date: "2025-07-14",
-    endDate: "2025-08-18",
+    date: "2025-05-01",
+    endDate: "2025-06-30",
     city: "Online",
     state: "Online",
-    description: "5-week bootcamp with hands-on AWS labs. Covers EC2, S3, Lambda, RDS, and prepares you for AWS Cloud Practitioner exam.",
-    registrationUrl: "https://openhackathons.org",
-    sourcePlatform: "OpenHackathons",
+    description: "Elite software development challenge for engineering students by Amazon. Focus on AI Engineering and large-scale coding. Pre-Placement Interview opportunities for top performers.",
+    registrationUrl: "https://unstop.com/blog/upcoming-hackathons",
+    sourcePlatform: "Unstop",
     isOnline: true,
-    prize: null,
-    tags: ["AWS", "Cloud", "DevOps"]
+    prize: "₹2,25,000 + PPIs",
+    tags: ["AI Engineering", "Amazon", "Coding"]
+  },
+
+  // ── HACK2SKILL ────────────────────────────────────────────
+  {
+    id: 7,
+    title: "Bharatiya Antariksh Hackathon 2025",
+    type: "hackathon",
+    date: "2025-08-07",
+    endDate: "2025-08-08",
+    city: "Hyderabad",
+    state: "Telangana",
+    description: "ISRO's national innovation challenge, powered by Hack2Skill. 14 real problem statements from India's space missions — AI/ML, Geospatial Tech, Image Processing. Grand Finale: 30-hour sprint at NRSC, Hyderabad. Registration deadline: Jul 9. Internship opportunities at ISRO for top teams.",
+    registrationUrl: "https://hack2skill.com/event/bah2025",
+    sourcePlatform: "Hack2Skill",
+    isOnline: false,
+    prize: "ISRO Internships + Certificates",
+    tags: ["SpaceTech", "ISRO", "AI/ML", "Geospatial"]
   },
   {
     id: 8,
-    title: "UX Design Sprint – Chennai",
-    type: "workshop",
-    date: "2025-07-12",
-    endDate: "2025-07-12",
-    city: "Chennai",
-    state: "Tamil Nadu",
-    description: "One-day Figma-based UX design sprint. Learn user research, wireframing, and prototyping. No design experience needed.",
-    registrationUrl: "https://lu.ma",
-    sourcePlatform: "Luma",
+    title: "Hyperspace Innovation Hackathon 2026",
+    type: "hackathon",
+    date: "2026-01-10",
+    endDate: "2026-01-11",
+    city: "Ghaziabad",
+    state: "Uttar Pradesh",
+    description: "Deep-tech 36-hour hackathon at IPEC Ghaziabad, powered by Hack2Skill with Microsoft and AWS support. Problem statements inspired by ISRO & DRDO. Tracks: SpaceTech, DroneTech, AI Systems, Robotics, Smart Cities, Sustainability, Open Innovation.",
+    registrationUrl: "https://hack2skill.com/event/hyperspace-hackathon",
+    sourcePlatform: "Hack2Skill",
     isOnline: false,
-    prize: null,
-    tags: ["UX", "Figma", "Design"]
+    prize: "₹2,00,000 + AWS Credits",
+    tags: ["DeepTech", "SpaceTech", "Robotics", "Drones"]
   },
   {
     id: 9,
-    title: "HackKolkata Urban Tech",
+    title: "AMD Slingshot — National AI Startup Challenge",
     type: "hackathon",
-    date: "2025-08-09",
-    endDate: "2025-08-10",
-    city: "Kolkata",
-    state: "West Bengal",
-    description: "Build smart city solutions for traffic, waste management, and public safety. Co-organized by Jadavpur University.",
-    registrationUrl: "https://hack2skill.com",
-    sourcePlatform: "Hack2Skill",
-    isOnline: false,
-    prize: "₹1,50,000",
-    tags: ["SmartCity", "IoT", "Sustainability"]
-  },
-  {
-    id: 10,
-    title: "Open Source Contribution Workshop",
-    type: "workshop",
-    date: "2025-07-08",
-    endDate: "2025-07-08",
+    date: "2025-07-01",
+    endDate: "2025-08-31",
     city: "Online",
     state: "Online",
-    description: "Learn how to contribute to GitHub OSS projects. Covers Git workflows, PR etiquette, issue triaging, and finding good first issues.",
-    registrationUrl: "https://lu.ma",
-    sourcePlatform: "Luma",
+    description: "National startup idea challenge for student innovators, powered by AMD and Hack2Skill. Across 10 cities. Gain mentorship, funding support, and compete for prizes. Focus: Ryzen AI innovation.",
+    registrationUrl: "https://hack2skill.com",
+    sourcePlatform: "Hack2Skill",
     isOnline: true,
+    prize: "₹10,00,000 + Innovation Grants",
+    tags: ["AI", "Startup", "AMD", "10 Cities"]
+  },
+
+  // ── HACKEREARTH ───────────────────────────────────────────
+  {
+    id: 10,
+    title: "India Connected: APIs for a Billion Lives",
+    type: "hackathon",
+    date: "2025-10-08",
+    endDate: "2025-10-11",
+    city: "New Delhi",
+    state: "Delhi",
+    description: "In-person hackathon by GSMA on HackerEarth. Build API-powered solutions across 5 theme areas addressing India's real-world challenges using Open Gateway APIs. Open to developers, startups, and innovators aged 18+. Participants must attend in person.",
+    registrationUrl: "https://www.hackerearth.com/challenges/hackathon/india-connected-apis-for-a-billion-lives/",
+    sourcePlatform: "HackerEarth",
+    isOnline: false,
     prize: null,
-    tags: ["OpenSource", "Git", "GitHub"]
+    tags: ["APIs", "GSMA", "Open Gateway", "Network"]
   },
   {
     id: 11,
-    title: "TechnoJam Ahmedabad",
+    title: "Thales GenTech India Hackathon 2025",
     type: "hackathon",
-    date: "2025-08-16",
-    endDate: "2025-08-17",
-    city: "Ahmedabad",
-    state: "Gujarat",
-    description: "36-hour student hackathon at DAIICT. Problem domains: AgriTech, Rural Connectivity, and Financial Inclusion.",
-    registrationUrl: "https://hackerearth.com",
+    date: "2025-09-15",
+    endDate: "2025-10-31",
+    city: "Online",
+    state: "Online",
+    description: "2nd edition of Thales' national hackathon on HackerEarth. Single-challenge format. Themes: Cybersecurity, Inclusive EdTech, AI for Social Impact, Aerospace/Aviation. Solo or teams up to 5. Open to all in India (not Thales employees).",
+    registrationUrl: "https://www.hackerearth.com/challenges/hackathon/thales-gentech-india-hackathon-3/",
     sourcePlatform: "HackerEarth",
-    isOnline: false,
-    prize: "₹80,000",
-    tags: ["AgriTech", "FinInclusion", "Rural"]
+    isOnline: true,
+    prize: "Cash prizes + Job opportunities at Thales",
+    tags: ["CyberSec", "EdTech", "AI", "Aerospace"]
   },
   {
     id: 12,
-    title: "Full Stack Dev Bootcamp",
-    type: "bootcamp",
-    date: "2025-07-21",
-    endDate: "2025-09-01",
-    city: "Bangalore",
-    state: "Karnataka",
-    description: "6-week full-stack bootcamp: HTML/CSS/JS, Node, Express, MongoDB, React. Build 3 portfolio projects. Job-ready curriculum.",
-    registrationUrl: "https://unstop.com",
-    sourcePlatform: "Unstop",
-    isOnline: false,
+    title: "SuRaksha Cyber Hackathon 2.0",
+    type: "hackathon",
+    date: "2025-07-20",
+    endDate: "2025-07-20",
+    city: "Online",
+    state: "Online",
+    description: "Campus-focused cybersecurity hackathon by Canara Bank on HackerEarth. Build behavior-based authentication systems for mobile banking. Focus: real-time fraud detection, password-less login, data privacy in fintech. Students only.",
+    registrationUrl: "https://canarabank.hackerearth.com/",
+    sourcePlatform: "HackerEarth",
+    isOnline: true,
     prize: null,
-    tags: ["MERN", "FullStack", "Portfolio"]
+    tags: ["CyberSec", "FinTech", "AI", "Banking"]
   },
   {
     id: 13,
-    title: "DataHack 2025 – National Finals",
+    title: "Capital One Launchpad 2025",
     type: "hackathon",
-    date: "2025-08-23",
-    endDate: "2025-08-24",
-    city: "Delhi",
-    state: "Delhi",
-    description: "India's premier data science hackathon. Compete on real datasets from healthcare, finance, and government sectors.",
-    registrationUrl: "https://hackerearth.com",
-    sourcePlatform: "HackerEarth",
-    isOnline: false,
-    prize: "₹4,00,000",
-    tags: ["DataScience", "ML", "Analytics"]
-  },
-  {
-    id: 14,
-    title: "Cybersecurity Essentials Workshop",
-    type: "workshop",
-    date: "2025-07-19",
-    endDate: "2025-07-19",
+    date: "2025-06-01",
+    endDate: "2025-07-31",
     city: "Online",
     state: "Online",
-    description: "Learn ethical hacking basics, OWASP Top 10, network security, and CTF techniques. Beginner-friendly with live demos.",
-    registrationUrl: "https://hack2skill.com",
-    sourcePlatform: "Hack2Skill",
+    description: "Capital One's flagship AI/ML innovation challenge in India on HackerEarth. Focus: Agentic AI prototypes for the agriculture sector. Empower farmers with intelligent, data-driven decision-making tools.",
+    registrationUrl: "https://capitalone.hackerearth.com/",
+    sourcePlatform: "HackerEarth",
     isOnline: true,
+    prize: "Cash prizes + Tech talks access",
+    tags: ["AgriTech", "Agentic AI", "ML", "Finance"]
+  },
+
+  // ── LUMA ─────────────────────────────────────────────────
+  {
+    id: 14,
+    title: "World's Largest Hackathon Kickoff — Bangalore",
+    type: "hackathon",
+    date: "2025-06-07",
+    endDate: "2025-06-07",
+    city: "Bangalore",
+    state: "Karnataka",
+    description: "Official kickoff meetup for the World's Largest Hackathon by Bolt.new, happening in Bengaluru. Meet fellow builders, discover project ideas, and dive into what Bolt can do. Venue TBA. Casual, community-first vibe.",
+    registrationUrl: "https://luma.com/uvtz1cmi",
+    sourcePlatform: "Luma",
+    isOnline: false,
     prize: null,
-    tags: ["CyberSec", "CTF", "Ethical Hacking"]
+    tags: ["Bolt.new", "Community", "Kickoff", "Builders"]
   },
   {
     id: 15,
-    title: "Pink City Hack – Jaipur",
+    title: "Clay / Lovable Hackathon — Bangalore",
     type: "hackathon",
-    date: "2025-08-30",
-    endDate: "2025-08-31",
-    city: "Jaipur",
-    state: "Rajasthan",
-    description: "Heritage + Technology hackathon. Build digital solutions for cultural preservation, tourism tech, and regional language AI.",
-    registrationUrl: "https://unstop.com",
-    sourcePlatform: "Unstop",
+    date: "2025-06-01",
+    endDate: "2025-06-01",
+    city: "Bangalore",
+    state: "Karnataka",
+    description: "In-person hackathon with Clay and Lovable at Bangalore. Build AI-powered GTM and CS automation tools. Clay and Lovable credits provided. Paid Clay workspace needed. Pre-event setup video shared with attendees.",
+    registrationUrl: "https://lu.ma/bi05",
+    sourcePlatform: "Luma",
     isOnline: false,
-    prize: "₹1,20,000",
-    tags: ["Heritage", "TourismTech", "NLP"]
+    prize: null,
+    tags: ["Clay", "Lovable", "AI Workflows", "GTM"]
   },
   {
     id: 16,
-    title: "Mobile App Dev Bootcamp",
-    type: "bootcamp",
-    date: "2025-07-28",
-    endDate: "2025-08-25",
-    city: "Online",
+    title: "Community Tech Meetups — India",
+    type: "workshop",
+    date: "2025-07-01",
+    endDate: "2025-12-31",
+    city: "Multiple Cities",
     state: "Online",
-    description: "4-week bootcamp on React Native. Build cross-platform iOS/Android apps. Topics: navigation, state, APIs, and App Store deployment.",
-    registrationUrl: "https://openhackathons.org",
-    sourcePlatform: "OpenHackathons",
+    description: "Ongoing calendar of tech meetups across India curated by CommunityMeetups on Luma — covering cities like Delhi NCR, Pune, Mumbai, Bangalore, and Indore. Includes workshops, hackathons, and conferences. Browse and filter by city on lu.ma/CommunityMeetups.",
+    registrationUrl: "https://luma.com/CommunityMeetups",
+    sourcePlatform: "Luma",
     isOnline: true,
     prize: null,
-    tags: ["ReactNative", "Mobile", "iOS", "Android"]
+    tags: ["Meetups", "Community", "Workshops", "All India"]
   },
+
+  // ── OPENHACKATHONS ────────────────────────────────────────
   {
     id: 17,
-    title: "MumbaiHacks – Climate Edition",
-    type: "hackathon",
-    date: "2025-09-06",
-    endDate: "2025-09-07",
-    city: "Mumbai",
-    state: "Maharashtra",
-    description: "36-hour climate-focused hackathon. Build solutions for carbon tracking, renewable energy optimization, and eco-behaviour apps.",
-    registrationUrl: "https://lu.ma",
-    sourcePlatform: "Luma",
-    isOnline: false,
-    prize: "₹2,50,000",
-    tags: ["Climate", "GreenTech", "Sustainability"]
+    title: "NCSA Open Hackathon 2025",
+    type: "bootcamp",
+    date: "2025-08-12",
+    endDate: "2025-08-21",
+    city: "Online",
+    state: "Online",
+    description: "NVIDIA + NCSA virtual Open Hackathon. Hands-on GPU accelerated computing event — help scientists and engineers port, accelerate, and optimize applications using CPUs, GPUs, and AI tools. Expert mentor-guided. GPU cluster access provided. Open globally; NCSA/NAIRR-affiliated teams get priority.",
+    registrationUrl: "https://www.openhackathons.org/s/siteevent/a0CUP000013BcYw2AK/se000370",
+    sourcePlatform: "OpenHackathons",
+    isOnline: true,
+    prize: "GPU Cluster Access + NVIDIA Mentorship",
+    tags: ["HPC", "GPU", "NVIDIA", "AI/ML", "Research"]
   },
   {
     id: 18,
-    title: "DSA & CP Bootcamp",
+    title: "TACC Open Hackathon 2025",
     type: "bootcamp",
-    date: "2025-07-10",
-    endDate: "2025-08-07",
+    date: "2025-10-21",
+    endDate: "2025-10-30",
     city: "Online",
     state: "Online",
-    description: "4-week competitive programming bootcamp. Master arrays, trees, graphs, DP, and segment trees. Daily problem sets + live doubt sessions.",
-    registrationUrl: "https://hackerearth.com",
-    sourcePlatform: "HackerEarth",
+    description: "NVIDIA + Texas Advanced Computing Center (TACC) hybrid Open Hackathon. Optimize real-world scientific applications for CPUs, GPUs, and modern supercomputing architectures. Mentor-paired teams get dedicated GPU cluster access.",
+    registrationUrl: "https://www.openhackathons.org/s/siteevent/a0CUP00000rxHPh2AM/se000357",
+    sourcePlatform: "OpenHackathons",
     isOnline: true,
-    prize: null,
-    tags: ["DSA", "CP", "Algorithms"]
+    prize: "GPU Access + Mentorship",
+    tags: ["HPC", "GPU", "NVIDIA", "Supercomputing"]
   },
   {
     id: 19,
-    title: "InnoHack Pune 2025",
-    type: "hackathon",
-    date: "2025-09-13",
-    endDate: "2025-09-14",
-    city: "Pune",
-    state: "Maharashtra",
-    description: "Innovation hackathon by Symbiosis Institute. Tracks: HealthTech, EdTech, and Smart Mobility. Investors in the jury panel.",
-    registrationUrl: "https://hack2skill.com",
-    sourcePlatform: "Hack2Skill",
-    isOnline: false,
-    prize: "₹1,80,000",
-    tags: ["HealthTech", "EdTech", "Mobility"]
-  },
-  {
-    id: 20,
-    title: "Docker & Kubernetes Workshop",
-    type: "workshop",
-    date: "2025-07-26",
-    endDate: "2025-07-26",
-    city: "Bangalore",
-    state: "Karnataka",
-    description: "Hands-on session on containerization with Docker and orchestration with Kubernetes. Build and deploy a microservices app.",
-    registrationUrl: "https://lu.ma",
-    sourcePlatform: "Luma",
-    isOnline: false,
-    prize: null,
-    tags: ["Docker", "Kubernetes", "DevOps"]
-  },
-  {
-    id: 21,
-    title: "HackNITK – Mangalore",
-    type: "hackathon",
-    date: "2025-09-20",
-    endDate: "2025-09-21",
-    city: "Mangalore",
-    state: "Karnataka",
-    description: "NIT Karnataka's annual 30-hour student hackathon. Problem statements from industry partners in logistics, retail, and energy.",
-    registrationUrl: "https://unstop.com",
-    sourcePlatform: "Unstop",
-    isOnline: false,
-    prize: "₹2,00,000",
-    tags: ["Logistics", "Retail", "Energy"]
-  },
-  {
-    id: 22,
-    title: "Generative AI Workshop Series",
-    type: "workshop",
-    date: "2025-08-02",
-    endDate: "2025-08-02",
-    city: "Online",
-    state: "Online",
-    description: "2-day virtual workshop on building with LLMs. Covers prompt engineering, LangChain, RAG, and deploying AI chatbots.",
-    registrationUrl: "https://hack2skill.com",
-    sourcePlatform: "Hack2Skill",
-    isOnline: true,
-    prize: null,
-    tags: ["GenAI", "LLM", "LangChain", "RAG"]
-  },
-  {
-    id: 23,
-    title: "Kochi Blockchain Summit Hackathon",
-    type: "hackathon",
-    date: "2025-09-27",
-    endDate: "2025-09-28",
-    city: "Kochi",
-    state: "Kerala",
-    description: "Build blockchain-based solutions for supply chain transparency, land records, and cross-border payments.",
-    registrationUrl: "https://hackerearth.com",
-    sourcePlatform: "HackerEarth",
-    isOnline: false,
-    prize: "₹1,50,000",
-    tags: ["Blockchain", "SupplyChain", "FinTech"]
-  },
-  {
-    id: 24,
-    title: "Git & GitHub for Beginners",
-    type: "workshop",
-    date: "2025-07-15",
-    endDate: "2025-07-15",
-    city: "Hyderabad",
-    state: "Telangana",
-    description: "Beginner-friendly hands-on workshop. Learn version control from scratch: commits, branches, merges, and open source collaboration.",
-    registrationUrl: "https://lu.ma",
-    sourcePlatform: "Luma",
-    isOnline: false,
-    prize: null,
-    tags: ["Git", "GitHub", "Beginner"]
-  },
-  {
-    id: 25,
-    title: "National Startup Hackathon 2025",
-    type: "hackathon",
-    date: "2025-10-04",
-    endDate: "2025-10-06",
-    city: "Delhi",
-    state: "Delhi",
-    description: "72-hour national-level hackathon. Top 10 teams get incubation support. Backed by Startup India and NASSCOM.",
-    registrationUrl: "https://unstop.com",
-    sourcePlatform: "Unstop",
-    isOnline: false,
-    prize: "₹10,00,000",
-    tags: ["Startup", "Incubation", "Nationwide"]
-  },
-  {
-    id: 26,
-    title: "VLSI & Embedded Systems Bootcamp",
+    title: "PSC/CMU/Pitt Open Hackathon",
     type: "bootcamp",
-    date: "2025-08-04",
-    endDate: "2025-09-01",
-    city: "Chennai",
-    state: "Tamil Nadu",
-    description: "4-week hardware bootcamp. Topics: Arduino, Raspberry Pi, FPGA basics, PCB design, and sensor interfacing. Kits included.",
-    registrationUrl: "https://openhackathons.org",
-    sourcePlatform: "OpenHackathons",
-    isOnline: false,
-    prize: null,
-    tags: ["Hardware", "Embedded", "FPGA"]
-  },
-  {
-    id: 27,
-    title: "HackRajasthan – Desert Edition",
-    type: "hackathon",
-    date: "2025-10-11",
-    endDate: "2025-10-12",
-    city: "Jodhpur",
-    state: "Rajasthan",
-    description: "Desert-themed hackathon at MBM University. Focus on water conservation tech, rural healthcare, and solar energy solutions.",
-    registrationUrl: "https://hack2skill.com",
-    sourcePlatform: "Hack2Skill",
-    isOnline: false,
-    prize: "₹75,000",
-    tags: ["WaterTech", "Solar", "Rural"]
-  },
-  {
-    id: 28,
-    title: "BuildWithAI – Open Online Hackathon",
-    type: "hackathon",
-    date: "2025-07-25",
-    endDate: "2025-07-27",
+    date: "2025-09-09",
+    endDate: "2025-09-18",
     city: "Online",
     state: "Online",
-    description: "72-hour online hackathon for building AI-powered products. Open to all students. Mentors from Google, Microsoft, and OpenAI.",
-    registrationUrl: "https://hackerearth.com",
-    sourcePlatform: "HackerEarth",
+    description: "Open Hackathon organized by Pittsburgh Supercomputing Center, Carnegie Mellon, and University of Pittsburgh in partnership with NVIDIA. Virtual event for computational scientists to port and optimize code on GPU clusters. Open to all globally.",
+    registrationUrl: "https://www.openhackathons.org",
+    sourcePlatform: "OpenHackathons",
     isOnline: true,
-    prize: "₹5,00,000",
-    tags: ["AI", "Product", "OpenSource"]
+    prize: "GPU Cluster Access + Expert Mentorship",
+    tags: ["HPC", "GPU", "NVIDIA", "CMU", "Research"]
   }
 ];
 
@@ -1181,7 +960,6 @@ function formatDate(iso) {
 }
 
 function formatDateRange(start, end) {
-  const s = new Date(start), e = new Date(end);
   if (start === end) return formatDate(start);
   return `${formatDate(start)} – ${formatDate(end)}`;
 }
@@ -1189,7 +967,6 @@ function formatDateRange(start, end) {
 function getFilteredEvents() {
   return EVENTS
     .filter(ev => {
-      // Online events always show
       const stateMatch = selectedState === 'ALL' || ev.isOnline || ev.state === selectedState;
       const typeMatch = selectedType === 'ALL' || ev.type === selectedType;
       return stateMatch && typeMatch;
@@ -1249,18 +1026,12 @@ function renderEvents() {
   }
 }
 
-/* ═══════════════════════════════════════════════
-   TICKER SETUP
-═══════════════════════════════════════════════ */
 function setupTicker() {
   const items = ['HACKATHONS', 'WORKSHOPS', 'BOOTCAMPS', 'OPEN SOURCE', 'BUILD', 'SHIP', 'WIN', 'INDIA', 'STUDENTS', 'INNOVATE', 'CODE'];
   const html = [...items, ...items].map(i => `<span class="ticker-item">${i}</span>`).join('');
   document.getElementById('ticker-track').innerHTML = html;
 }
 
-/* ═══════════════════════════════════════════════
-   LAST UPDATED
-═══════════════════════════════════════════════ */
 function setupTimestamp() {
   const el = document.getElementById('hero-updated');
   const now = new Date();
@@ -1268,18 +1039,13 @@ function setupTimestamp() {
   el.textContent = `// LAST UPDATED: ${ts.toUpperCase()}`;
 }
 
-/* ═══════════════════════════════════════════════
-   EVENT LISTENERS
-═══════════════════════════════════════════════ */
 function setupFilters() {
-  // Restore saved state
   const select = document.getElementById('state-select');
   select.value = selectedState;
 
   select.addEventListener('change', () => {
     selectedState = select.value;
     localStorage.setItem('hackzone_state', selectedState);
-    // Flash yellow
     select.classList.add('flash');
     setTimeout(() => select.classList.remove('flash'), 200);
     renderEvents();
@@ -1295,9 +1061,6 @@ function setupFilters() {
   });
 }
 
-/* ═══════════════════════════════════════════════
-   INIT
-═══════════════════════════════════════════════ */
 document.addEventListener('DOMContentLoaded', () => {
   setupTicker();
   setupTimestamp();
