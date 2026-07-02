@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HACK//ZONE — Student Tech Events Hub</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- HERO -->
+<section id="hero">
+  <div class="hero-bg-text">HACK</div>
+  <div class="hero-tag">// EST. 2025 · INDIA'S STUDENT TECH HUB</div>
+  <h1 class="hero-title">HACK<span class="slash">//</span>ZONE</h1>
+  <p class="hero-subtitle">Find Hackathons · Workshops · Bootcamps</p>
+  <a href="#events-section" class="hero-cta">EXPLORE NOW →</a>
+  <div class="hero-updated" id="hero-updated"></div>
+
+  <div class="ticker-wrap">
+    <div class="ticker-track" id="ticker-track"></div>
+  </div>
+</section>
+
+<!-- DATA NOTICE -->
+<div class="data-notice">
+  ⚡ All events sourced from Unstop · Hack2Skill · HackerEarth · Luma · OpenHackathons — verify details on source platforms before registering
+</div>
+
+<!-- FILTER BAR -->
+<div id="filter-bar">
+  <span class="filter-label">Location:</span>
+  <select id="state-select">
+    <option value="ALL">📍 ALL STATES</option>
+    <option value="Online">🌐 ONLINE / VIRTUAL</option>
+    <optgroup label="─── STATES ───">
+      <option value="Andhra Pradesh">Andhra Pradesh</option>
+      <option value="Arunachal Pradesh">Arunachal Pradesh</option>
+      <option value="Assam">Assam</option>
+      <option value="Bihar">Bihar</option>
+      <option value="Chhattisgarh">Chhattisgarh</option>
+      <option value="Goa">Goa</option>
+      <option value="Gujarat">Gujarat</option>
+      <option value="Haryana">Haryana</option>
+      <option value="Himachal Pradesh">Himachal Pradesh</option>
+      <option value="Jharkhand">Jharkhand</option>
+      <option value="Karnataka">Karnataka</option>
+      <option value="Kerala">Kerala</option>
+      <option value="Madhya Pradesh">Madhya Pradesh</option>
+      <option value="Maharashtra">Maharashtra</option>
+      <option value="Manipur">Manipur</option>
+      <option value="Meghalaya">Meghalaya</option>
+      <option value="Mizoram">Mizoram</option>
+      <option value="Nagaland">Nagaland</option>
+      <option value="Odisha">Odisha</option>
+      <option value="Punjab">Punjab</option>
+      <option value="Rajasthan">Rajasthan</option>
+      <option value="Sikkim">Sikkim</option>
+      <option value="Tamil Nadu">Tamil Nadu</option>
+      <option value="Telangana">Telangana</option>
+      <option value="Tripura">Tripura</option>
+      <option value="Uttar Pradesh">Uttar Pradesh</option>
+      <option value="Uttarakhand">Uttarakhand</option>
+      <option value="West Bengal">West Bengal</option>
+    </optgroup>
+    <optgroup label="─── UTs ───">
+      <option value="Delhi">Delhi</option>
+      <option value="J&K">Jammu & Kashmir</option>
+      <option value="Ladakh">Ladakh</option>
+      <option value="Chandigarh">Chandigarh</option>
+      <option value="Puducherry">Puducherry</option>
+    </optgroup>
+  </select>
+
+  <div class="filter-pills">
+    <button class="pill active" data-type="ALL">ALL</button>
+    <button class="pill" data-type="hackathon">HACKATHON</button>
+    <button class="pill" data-type="workshop">WORKSHOP</button>
+    <button class="pill" data-type="bootcamp">BOOTCAMP</button>
+  </div>
+
+  <div id="results-counter">SHOWING — EVENTS</div>
+</div>
+
+<!-- EVENTS SECTION -->
+<section id="events-section">
+  <div class="section-header">
+    <h2 class="section-title">EVENTS</h2>
+    <span class="section-tag">// LIVE LISTINGS</span>
+  </div>
+  <div id="events-grid"></div>
+  <div id="empty-state">
+    <h2 id="empty-state-title">NO EVENTS FOUND</h2>
+    <p>Try a different state or filter combo</p>
+  </div>
+</section>
+
+<!-- PLATFORM DIRECTORY -->
+<section id="platforms">
+  <div class="platform-head">// SOURCE PLATFORMS — WHERE EVENTS COME FROM</div>
+  <div class="platform-strip">
+    <a href="https://hack2skill.com" target="_blank" class="platform-item">
+      <div class="platform-name">Hack2Skill</div>
+      <div class="platform-url">hack2skill.com</div>
+      <div class="platform-arrow">↗</div>
+    </a>
+    <a href="https://unstop.com" target="_blank" class="platform-item">
+      <div class="platform-name">Unstop</div>
+      <div class="platform-url">unstop.com</div>
+      <div class="platform-arrow">↗</div>
+    </a>
+    <a href="https://hackerearth.com/challenges/hackathon" target="_blank" class="platform-item">
+      <div class="platform-name">HackerEarth</div>
+      <div class="platform-url">hackerearth.com</div>
+      <div class="platform-arrow">↗</div>
+    </a>
+    <a href="https://lu.ma/tech" target="_blank" class="platform-item">
+      <div class="platform-name">Luma</div>
+      <div class="platform-url">lu.ma</div>
+      <div class="platform-arrow">↗</div>
+    </a>
+    <a href="https://openhackathons.org" target="_blank" class="platform-item">
+      <div class="platform-name">OpenHackathons</div>
+      <div class="platform-url">openhackathons.org</div>
+      <div class="platform-arrow">↗</div>
+    </a>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer id="footer">
+  <div>
+    <div class="footer-text">HACK//ZONE © 2025</div>
+    <div class="footer-sub">Built for students. By students.</div>
+  </div>
+  <div class="footer-mark">H//Z</div>
+</footer>
+
+<script src="app.js" defer></script>
+</body>
+</html>

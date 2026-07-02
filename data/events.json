@@ -1,0 +1,927 @@
+[
+  {
+    "id": 1,
+    "title": "Adobe India Hackathon 2025",
+    "type": "hackathon",
+    "date": "2025-07-10",
+    "endDate": "2025-09-05",
+    "city": "Online + Noida (Finale)",
+    "state": "Online",
+    "description": "Multi-round hackathon by Adobe, exclusively on Unstop. Theme: reimagining PDFs as intelligent, interactive experiences. Grand Finale at Adobe HQ, Noida. Open to B.Tech/M.Tech students graduating 2026–2029. Teams of 2–3.",
+    "registrationUrl": "https://unstop.com/hackathons/adobe-india-hackathon-adobe-1483364",
+    "sourcePlatform": "Unstop",
+    "isOnline": true,
+    "prize": "MacBook Air (1st) · iPad Air (2nd) · ₹1L/mo Internship",
+    "tags": [
+      "Document Intelligence",
+      "AI",
+      "Product"
+    ]
+  },
+  {
+    "id": 2,
+    "title": "Hackground India 2K25",
+    "type": "hackathon",
+    "date": "2025-07-01",
+    "endDate": "2025-07-01",
+    "city": "New Delhi",
+    "state": "Delhi",
+    "description": "Student-led hackathon at Maharaja Surajmal Institute (MSI), New Delhi. Open-ended innovation challenge for engineering students across disciplines.",
+    "registrationUrl": "https://unstop.com/hackathons/hackground-india-2k25-maharaja-surajmal-institute-msi-new-delhi-1520271",
+    "sourcePlatform": "Unstop",
+    "isOnline": false,
+    "prize": null,
+    "tags": [
+      "Open Innovation",
+      "Engineering",
+      "Student"
+    ]
+  },
+  {
+    "id": 3,
+    "title": "PKP Mumbai Hackathon 2025",
+    "type": "hackathon",
+    "date": "2025-12-07",
+    "endDate": "2025-12-07",
+    "city": "Mumbai",
+    "state": "Maharashtra",
+    "description": "Programmers Ka Parivar presents an in-person community hackathon in Mumbai. Collaborative coding event focused on building practical solutions.",
+    "registrationUrl": "https://unstop.com/hackathons/pkp-mumbai-hackathon-2025-programmers-ka-parivar-1547177",
+    "sourcePlatform": "Unstop",
+    "isOnline": false,
+    "prize": null,
+    "tags": [
+      "Community",
+      "Dev",
+      "Mumbai"
+    ]
+  },
+  {
+    "id": 4,
+    "title": "HackIndia 2025 — UP West Regionals",
+    "type": "hackathon",
+    "date": "2025-09-20",
+    "endDate": "2025-09-22",
+    "city": "Greater Noida",
+    "state": "Uttar Pradesh",
+    "description": "Regional node of HackIndia 2025 hosted at Lloyd Institute of Engineering & Technology, Greater Noida. Part of the national HackIndia circuit.",
+    "registrationUrl": "https://unstop.com/hackathons/hackindia-2025-lloyd-institute-of-engineering-and-technology-greater-noida-1458902",
+    "sourcePlatform": "Unstop",
+    "isOnline": false,
+    "prize": null,
+    "tags": [
+      "HackIndia",
+      "Regional",
+      "Engineering"
+    ]
+  },
+  {
+    "id": 5,
+    "title": "ET AI Hackathon 2.0",
+    "type": "hackathon",
+    "date": "2025-06-01",
+    "endDate": "2025-09-30",
+    "city": "Online",
+    "state": "Online",
+    "description": "Economic Times flagship nation-scale innovation challenge. Multi-phase journey focused on Applied AI, prototype development, and scalable business/social innovation. Open to students and professionals.",
+    "registrationUrl": "https://unstop.com/blog/upcoming-hackathons",
+    "sourcePlatform": "Unstop",
+    "isOnline": true,
+    "prize": "₹10,00,000 + PPIs",
+    "tags": [
+      "Applied AI",
+      "Innovation",
+      "Nationwide"
+    ]
+  },
+  {
+    "id": 6,
+    "title": "HackOn with Amazon 6.0",
+    "type": "hackathon",
+    "date": "2025-05-01",
+    "endDate": "2025-06-30",
+    "city": "Online",
+    "state": "Online",
+    "description": "Elite software development challenge for engineering students by Amazon. Focus on AI Engineering and large-scale coding. Pre-Placement Interview opportunities for top performers.",
+    "registrationUrl": "https://unstop.com/blog/upcoming-hackathons",
+    "sourcePlatform": "Unstop",
+    "isOnline": true,
+    "prize": "₹2,25,000 + PPIs",
+    "tags": [
+      "AI Engineering",
+      "Amazon",
+      "Coding"
+    ]
+  },
+  {
+    "id": 7,
+    "title": "Bharatiya Antariksh Hackathon 2025",
+    "type": "hackathon",
+    "date": "2025-08-07",
+    "endDate": "2025-08-08",
+    "city": "Hyderabad",
+    "state": "Telangana",
+    "description": "ISRO's national innovation challenge, powered by Hack2Skill. 14 real problem statements from India's space missions — AI/ML, Geospatial Tech, Image Processing. Grand Finale: 30-hour sprint at NRSC, Hyderabad. Registration deadline: Jul 9. Internship opportunities at ISRO for top teams.",
+    "registrationUrl": "https://hack2skill.com/event/bah2025",
+    "sourcePlatform": "Hack2Skill",
+    "isOnline": false,
+    "prize": "ISRO Internships + Certificates",
+    "tags": [
+      "SpaceTech",
+      "ISRO",
+      "AI/ML",
+      "Geospatial"
+    ]
+  },
+  {
+    "id": 8,
+    "title": "Hyperspace Innovation Hackathon 2026",
+    "type": "hackathon",
+    "date": "2026-01-10",
+    "endDate": "2026-01-11",
+    "city": "Ghaziabad",
+    "state": "Uttar Pradesh",
+    "description": "Deep-tech 36-hour hackathon at IPEC Ghaziabad, powered by Hack2Skill with Microsoft and AWS support. Problem statements inspired by ISRO & DRDO. Tracks: SpaceTech, DroneTech, AI Systems, Robotics, Smart Cities, Sustainability, Open Innovation.",
+    "registrationUrl": "https://hack2skill.com/event/hyperspace-hackathon",
+    "sourcePlatform": "Hack2Skill",
+    "isOnline": false,
+    "prize": "₹2,00,000 + AWS Credits",
+    "tags": [
+      "DeepTech",
+      "SpaceTech",
+      "Robotics",
+      "Drones"
+    ]
+  },
+  {
+    "id": 9,
+    "title": "AMD Slingshot — National AI Startup Challenge",
+    "type": "hackathon",
+    "date": "2025-07-01",
+    "endDate": "2025-08-31",
+    "city": "Online",
+    "state": "Online",
+    "description": "National startup idea challenge for student innovators, powered by AMD and Hack2Skill. Across 10 cities. Gain mentorship, funding support, and compete for prizes. Focus: Ryzen AI innovation.",
+    "registrationUrl": "https://hack2skill.com",
+    "sourcePlatform": "Hack2Skill",
+    "isOnline": true,
+    "prize": "₹10,00,000 + Innovation Grants",
+    "tags": [
+      "AI",
+      "Startup",
+      "AMD",
+      "10 Cities"
+    ]
+  },
+  {
+    "id": 10,
+    "title": "India Connected: APIs for a Billion Lives",
+    "type": "hackathon",
+    "date": "2025-10-08",
+    "endDate": "2025-10-11",
+    "city": "New Delhi",
+    "state": "Delhi",
+    "description": "In-person hackathon by GSMA on HackerEarth. Build API-powered solutions across 5 theme areas addressing India's real-world challenges using Open Gateway APIs. Open to developers, startups, and innovators aged 18+. Participants must attend in person.",
+    "registrationUrl": "https://www.hackerearth.com/challenges/hackathon/india-connected-apis-for-a-billion-lives/",
+    "sourcePlatform": "HackerEarth",
+    "isOnline": false,
+    "prize": null,
+    "tags": [
+      "APIs",
+      "GSMA",
+      "Open Gateway",
+      "Network"
+    ]
+  },
+  {
+    "id": 11,
+    "title": "Thales GenTech India Hackathon 2025",
+    "type": "hackathon",
+    "date": "2025-09-15",
+    "endDate": "2025-10-31",
+    "city": "Online",
+    "state": "Online",
+    "description": "2nd edition of Thales' national hackathon on HackerEarth. Single-challenge format. Themes: Cybersecurity, Inclusive EdTech, AI for Social Impact, Aerospace/Aviation. Solo or teams up to 5. Open to all in India (not Thales employees).",
+    "registrationUrl": "https://www.hackerearth.com/challenges/hackathon/thales-gentech-india-hackathon-3/",
+    "sourcePlatform": "HackerEarth",
+    "isOnline": true,
+    "prize": "Cash prizes + Job opportunities at Thales",
+    "tags": [
+      "CyberSec",
+      "EdTech",
+      "AI",
+      "Aerospace"
+    ]
+  },
+  {
+    "id": 12,
+    "title": "SuRaksha Cyber Hackathon 2.0",
+    "type": "hackathon",
+    "date": "2025-07-20",
+    "endDate": "2025-07-20",
+    "city": "Online",
+    "state": "Online",
+    "description": "Campus-focused cybersecurity hackathon by Canara Bank on HackerEarth. Build behavior-based authentication systems for mobile banking. Focus: real-time fraud detection, password-less login, data privacy in fintech. Students only.",
+    "registrationUrl": "https://canarabank.hackerearth.com/",
+    "sourcePlatform": "HackerEarth",
+    "isOnline": true,
+    "prize": null,
+    "tags": [
+      "CyberSec",
+      "FinTech",
+      "AI",
+      "Banking"
+    ]
+  },
+  {
+    "id": 13,
+    "title": "Capital One Launchpad 2025",
+    "type": "hackathon",
+    "date": "2025-06-01",
+    "endDate": "2025-07-31",
+    "city": "Online",
+    "state": "Online",
+    "description": "Capital One's flagship AI/ML innovation challenge in India on HackerEarth. Focus: Agentic AI prototypes for the agriculture sector. Empower farmers with intelligent, data-driven decision-making tools.",
+    "registrationUrl": "https://capitalone.hackerearth.com/",
+    "sourcePlatform": "HackerEarth",
+    "isOnline": true,
+    "prize": "Cash prizes + Tech talks access",
+    "tags": [
+      "AgriTech",
+      "Agentic AI",
+      "ML",
+      "Finance"
+    ]
+  },
+  {
+    "id": 14,
+    "title": "World's Largest Hackathon Kickoff — Bangalore",
+    "type": "hackathon",
+    "date": "2025-06-07",
+    "endDate": "2025-06-07",
+    "city": "Bangalore",
+    "state": "Karnataka",
+    "description": "Official kickoff meetup for the World's Largest Hackathon by Bolt.new, happening in Bengaluru. Meet fellow builders, discover project ideas, and dive into what Bolt can do. Venue TBA. Casual, community-first vibe.",
+    "registrationUrl": "https://luma.com/uvtz1cmi",
+    "sourcePlatform": "Luma",
+    "isOnline": false,
+    "prize": null,
+    "tags": [
+      "Bolt.new",
+      "Community",
+      "Kickoff",
+      "Builders"
+    ]
+  },
+  {
+    "id": 15,
+    "title": "Clay / Lovable Hackathon — Bangalore",
+    "type": "hackathon",
+    "date": "2025-06-01",
+    "endDate": "2025-06-01",
+    "city": "Bangalore",
+    "state": "Karnataka",
+    "description": "In-person hackathon with Clay and Lovable at Bangalore. Build AI-powered GTM and CS automation tools. Clay and Lovable credits provided. Paid Clay workspace needed. Pre-event setup video shared with attendees.",
+    "registrationUrl": "https://lu.ma/bi05",
+    "sourcePlatform": "Luma",
+    "isOnline": false,
+    "prize": null,
+    "tags": [
+      "Clay",
+      "Lovable",
+      "AI Workflows",
+      "GTM"
+    ]
+  },
+  {
+    "id": 16,
+    "title": "Community Tech Meetups — India",
+    "type": "workshop",
+    "date": "2025-07-01",
+    "endDate": "2025-12-31",
+    "city": "Multiple Cities",
+    "state": "Online",
+    "description": "Ongoing calendar of tech meetups across India curated by CommunityMeetups on Luma — covering cities like Delhi NCR, Pune, Mumbai, Bangalore, and Indore. Includes workshops, hackathons, and conferences. Browse and filter by city on lu.ma/CommunityMeetups.",
+    "registrationUrl": "https://luma.com/CommunityMeetups",
+    "sourcePlatform": "Luma",
+    "isOnline": true,
+    "prize": null,
+    "tags": [
+      "Meetups",
+      "Community",
+      "Workshops",
+      "All India"
+    ]
+  },
+  {
+    "id": 17,
+    "title": "NCSA Open Hackathon 2025",
+    "type": "bootcamp",
+    "date": "2025-08-12",
+    "endDate": "2025-08-21",
+    "city": "Online",
+    "state": "Online",
+    "description": "NVIDIA + NCSA virtual Open Hackathon. Hands-on GPU accelerated computing event — help scientists and engineers port, accelerate, and optimize applications using CPUs, GPUs, and AI tools. Expert mentor-guided. GPU cluster access provided. Open globally; NCSA/NAIRR-affiliated teams get priority.",
+    "registrationUrl": "https://www.openhackathons.org/s/siteevent/a0CUP000013BcYw2AK/se000370",
+    "sourcePlatform": "OpenHackathons",
+    "isOnline": true,
+    "prize": "GPU Cluster Access + NVIDIA Mentorship",
+    "tags": [
+      "HPC",
+      "GPU",
+      "NVIDIA",
+      "AI/ML",
+      "Research"
+    ]
+  },
+  {
+    "id": 18,
+    "title": "TACC Open Hackathon 2025",
+    "type": "bootcamp",
+    "date": "2025-10-21",
+    "endDate": "2025-10-30",
+    "city": "Online",
+    "state": "Online",
+    "description": "NVIDIA + Texas Advanced Computing Center (TACC) hybrid Open Hackathon. Optimize real-world scientific applications for CPUs, GPUs, and modern supercomputing architectures. Mentor-paired teams get dedicated GPU cluster access.",
+    "registrationUrl": "https://www.openhackathons.org/s/siteevent/a0CUP00000rxHPh2AM/se000357",
+    "sourcePlatform": "OpenHackathons",
+    "isOnline": true,
+    "prize": "GPU Access + Mentorship",
+    "tags": [
+      "HPC",
+      "GPU",
+      "NVIDIA",
+      "Supercomputing"
+    ]
+  },
+  {
+    "id": 19,
+    "title": "PSC/CMU/Pitt Open Hackathon",
+    "type": "bootcamp",
+    "date": "2025-09-09",
+    "endDate": "2025-09-18",
+    "city": "Online",
+    "state": "Online",
+    "description": "Open Hackathon organized by Pittsburgh Supercomputing Center, Carnegie Mellon, and University of Pittsburgh in partnership with NVIDIA. Virtual event for computational scientists to port and optimize code on GPU clusters. Open to all globally.",
+    "registrationUrl": "https://www.openhackathons.org",
+    "sourcePlatform": "OpenHackathons",
+    "isOnline": true,
+    "prize": "GPU Cluster Access + Expert Mentorship",
+    "tags": [
+      "HPC",
+      "GPU",
+      "NVIDIA",
+      "CMU",
+      "Research"
+    ]
+  },
+  {
+    "id": 20,
+    "title": "Adobe India Hackathon 2026",
+    "type": "hackathon",
+    "date": "2026-07-10",
+    "endDate": "2026-07-25",
+    "city": "Online + Noida (Finale)",
+    "state": "Online",
+    "description": "Adobe flagship hackathon. Reimagining document experiences using generative AI and intelligent document APIs. Grand Finale at Adobe HQ, Noida.",
+    "registrationUrl": "https://unstop.com/hackathons/adobe-india-hackathon-adobe-1483364",
+    "sourcePlatform": "Unstop",
+    "isOnline": true,
+    "prize": "MacBook Air (1st) · iPad Air (2nd) · ₹1L/mo Internship",
+    "tags": [
+      "AI",
+      "Document Intel",
+      "Product"
+    ]
+  },
+  {
+    "id": 21,
+    "title": "Hackground India 2026",
+    "type": "hackathon",
+    "date": "2026-07-02",
+    "endDate": "2026-07-03",
+    "city": "New Delhi",
+    "state": "Delhi",
+    "description": "National student hackathon hosted at Maharaja Surajmal Institute (MSI). Build and pitch open innovation prototypes to industry veterans.",
+    "registrationUrl": "https://unstop.com/hackathons/hackground-india-2k25-maharaja-surajmal-institute-msi-new-delhi-1520271",
+    "sourcePlatform": "Unstop",
+    "isOnline": false,
+    "prize": "₹1,50,000 Cash Prize Pool",
+    "tags": [
+      "Open Innovation",
+      "Student"
+    ]
+  },
+  {
+    "id": 22,
+    "title": "ET AI Hackathon 3.0",
+    "type": "hackathon",
+    "date": "2026-07-15",
+    "endDate": "2026-07-28",
+    "city": "Online",
+    "state": "Online",
+    "description": "The Economic Times flagship nationwide hackathon for building scalable consumer and corporate AI solutions.",
+    "registrationUrl": "https://unstop.com/blog/upcoming-hackathons",
+    "sourcePlatform": "Unstop",
+    "isOnline": true,
+    "prize": "₹12,00,000 + PPIs",
+    "tags": [
+      "Applied AI",
+      "Enterprise"
+    ]
+  },
+  {
+    "id": 23,
+    "title": "India Connected: APIs for a Billion Lives 2026",
+    "type": "hackathon",
+    "date": "2026-07-12",
+    "endDate": "2026-07-15",
+    "city": "New Delhi",
+    "state": "Delhi",
+    "description": "In-person GSMA hackathon on HackerEarth. Build API-powered solutions using Open Gateway GSMA APIs to address India's real-world connectivity challenges.",
+    "registrationUrl": "https://www.hackerearth.com/challenges/hackathon/india-connected-apis-for-a-billion-lives/",
+    "sourcePlatform": "HackerEarth",
+    "isOnline": false,
+    "prize": "₹5,00,000 + Tech Gadgets",
+    "tags": [
+      "APIs",
+      "GSMA",
+      "Networks"
+    ]
+  },
+  {
+    "id": 24,
+    "title": "Thales GenTech India Hackathon 2026",
+    "type": "hackathon",
+    "date": "2026-07-20",
+    "endDate": "2026-07-28",
+    "city": "Online",
+    "state": "Online",
+    "description": "National innovation challenge by Thales. Tracks: Cybersecurity, Aerospace/Aviation, and AI for Social Impact. Open to solo and teams up to 5.",
+    "registrationUrl": "https://www.hackerearth.com/challenges/hackathon/thales-gentech-india-hackathon-3/",
+    "sourcePlatform": "HackerEarth",
+    "isOnline": true,
+    "prize": "Job Offers at Thales + Cash Prizes",
+    "tags": [
+      "CyberSec",
+      "AI",
+      "Aerospace"
+    ]
+  },
+  {
+    "id": 25,
+    "title": "SuRaksha Cyber Hackathon 3.0",
+    "type": "hackathon",
+    "date": "2026-07-05",
+    "endDate": "2026-07-05",
+    "city": "Online",
+    "state": "Online",
+    "description": "Campus-focused cybersecurity hackathon by Canara Bank. Build secure authentication systems and mobile banking anti-fraud patterns.",
+    "registrationUrl": "https://canarabank.hackerearth.com/",
+    "sourcePlatform": "HackerEarth",
+    "isOnline": true,
+    "prize": "Pre-Placement Interviews (PPI)",
+    "tags": [
+      "FinTech",
+      "CyberSec",
+      "AI"
+    ]
+  },
+  {
+    "id": 26,
+    "title": "Bharatiya Antariksh Hackathon 2026",
+    "type": "hackathon",
+    "date": "2026-07-07",
+    "endDate": "2026-07-08",
+    "city": "Hyderabad",
+    "state": "Telangana",
+    "description": "National space technology innovation challenge powered by ISRO and Hack2Skill. Hack on 14 geospatial and image processing problems at NRSC, Hyderabad.",
+    "registrationUrl": "https://hack2skill.com/event/bah2025",
+    "sourcePlatform": "Hack2Skill",
+    "isOnline": false,
+    "prize": "ISRO Internship Opportunity + Certificates",
+    "tags": [
+      "SpaceTech",
+      "ISRO",
+      "AI/ML"
+    ]
+  },
+  {
+    "id": 27,
+    "title": "Hyperspace Innovation Hackathon 2027",
+    "type": "hackathon",
+    "date": "2027-01-10",
+    "endDate": "2027-01-11",
+    "city": "Ghaziabad",
+    "state": "Uttar Pradesh",
+    "description": "Deep-tech 36-hour hackathon at IPEC, supported by AWS and Microsoft. Build drone, space, and robotics solutions.",
+    "registrationUrl": "https://hack2skill.com/event/hyperspace-hackathon",
+    "sourcePlatform": "Hack2Skill",
+    "isOnline": false,
+    "prize": "₹2,00,000 + AWS Credits",
+    "tags": [
+      "DeepTech",
+      "AWS",
+      "Robotics"
+    ]
+  },
+  {
+    "id": 28,
+    "title": "AMD Slingshot — National AI Startup Challenge",
+    "type": "hackathon",
+    "date": "2026-07-01",
+    "endDate": "2026-07-31",
+    "city": "Online",
+    "state": "Online",
+    "description": "Accelerate your AI startup journey with AMD and Hack2Skill. Focused on building hardware-accelerated generative AI models using Ryzen processors.",
+    "registrationUrl": "https://hack2skill.com",
+    "sourcePlatform": "Hack2Skill",
+    "isOnline": true,
+    "prize": "₹10,00,000 + Innovation Grants",
+    "tags": [
+      "AI",
+      "AMD",
+      "Hardware"
+    ]
+  },
+  {
+    "id": 29,
+    "title": "Bolt.new India Hackathon Kickoff",
+    "type": "hackathon",
+    "date": "2026-07-07",
+    "endDate": "2026-07-07",
+    "city": "Bangalore",
+    "state": "Karnataka",
+    "description": "Official community kickoff meetup for building AI-augmented workflows with Bolt.new. Work with expert developers and pitch your ideas.",
+    "registrationUrl": "https://luma.com/uvtz1cmi",
+    "sourcePlatform": "Luma",
+    "isOnline": false,
+    "prize": null,
+    "tags": [
+      "Bolt.new",
+      "Community",
+      "Builders"
+    ]
+  },
+  {
+    "id": 30,
+    "title": "Clay / Lovable AI Automation Hackathon",
+    "type": "hackathon",
+    "date": "2026-07-01",
+    "endDate": "2026-07-01",
+    "city": "Bangalore",
+    "state": "Karnataka",
+    "description": "In-person workflow building challenge. Build sales automation and customer intelligence workflows using Clay and Lovable.",
+    "registrationUrl": "https://lu.ma/bi05",
+    "sourcePlatform": "Luma",
+    "isOnline": false,
+    "prize": "Clay & Lovable Free Workspace Credits",
+    "tags": [
+      "Clay",
+      "Lovable",
+      "AI Tools"
+    ]
+  },
+  {
+    "id": 31,
+    "title": "Community Web Dev Workshops",
+    "type": "workshop",
+    "date": "2026-07-15",
+    "endDate": "2026-07-16",
+    "city": "Multiple Cities",
+    "state": "Online",
+    "description": "Curated workshops covering advanced UI/UX, CSS architecture, Tailwind integration, and React styling performance optimizations.",
+    "registrationUrl": "https://luma.com/CommunityMeetups",
+    "sourcePlatform": "Luma",
+    "isOnline": true,
+    "prize": null,
+    "tags": [
+      "Meetup",
+      "WebDev",
+      "Workshop"
+    ]
+  },
+  {
+    "id": 32,
+    "title": "NCSA GPU Open Hackathon 2026",
+    "type": "bootcamp",
+    "date": "2026-07-12",
+    "endDate": "2026-07-21",
+    "city": "Online",
+    "state": "Online",
+    "description": "Hands-on GPU acceleration bootcamp organized by NVIDIA and NCSA. Port and optimize scientific codebases on high-performance GPU clusters.",
+    "registrationUrl": "https://www.openhackathons.org/s/siteevent/a0CUP000013BcYw2AK/se000370",
+    "sourcePlatform": "OpenHackathons",
+    "isOnline": true,
+    "prize": "NVIDIA Expert Mentorship + GPU Cluster Access",
+    "tags": [
+      "GPU",
+      "NVIDIA",
+      "AI/ML",
+      "HPC"
+    ]
+  },
+  {
+    "id": 33,
+    "title": "TACC Supercomputing Open Hackathon 2026",
+    "type": "bootcamp",
+    "date": "2026-07-21",
+    "endDate": "2026-07-30",
+    "city": "Online",
+    "state": "Online",
+    "description": "Accelerate your code on TACC's world-class supercomputers. Guided porting and AI model optimizations with NVIDIA systems architects.",
+    "registrationUrl": "https://www.openhackathons.org/s/siteevent/a0CUP00000rxHPh2AM/se000357",
+    "sourcePlatform": "OpenHackathons",
+    "isOnline": true,
+    "prize": "TACC Supercomputer Access + Mentorship",
+    "tags": [
+      "Supercomputing",
+      "GPU",
+      "HPC"
+    ]
+  },
+  {
+    "id": 34,
+    "title": "PSC/CMU/Pitt Scientific Coding Hackathon",
+    "type": "bootcamp",
+    "date": "2026-07-09",
+    "endDate": "2026-07-18",
+    "city": "Online",
+    "state": "Online",
+    "description": "Accelerate computational chemistry, biology, or astrophysics models on GPU clusters. Hosted by CMU, University of Pittsburgh, and NVIDIA.",
+    "registrationUrl": "https://www.openhackathons.org",
+    "sourcePlatform": "OpenHackathons",
+    "isOnline": true,
+    "prize": "GPU Core-hours Grants",
+    "tags": [
+      "Research",
+      "GPU",
+      "HPC"
+    ]
+  },
+  {
+    "id": 35,
+    "title": "Adobe India Hackathon 2026",
+    "type": "hackathon",
+    "date": "2026-08-10",
+    "endDate": "2026-08-25",
+    "city": "Online + Noida (Finale)",
+    "state": "Online",
+    "description": "Adobe flagship hackathon. Reimagining document experiences using generative AI and intelligent document APIs. Grand Finale at Adobe HQ, Noida.",
+    "registrationUrl": "https://unstop.com/hackathons/adobe-india-hackathon-adobe-1483364",
+    "sourcePlatform": "Unstop",
+    "isOnline": true,
+    "prize": "MacBook Air (1st) · iPad Air (2nd) · ₹1L/mo Internship",
+    "tags": [
+      "AI",
+      "Document Intel",
+      "Product"
+    ]
+  },
+  {
+    "id": 36,
+    "title": "Hackground India 2026",
+    "type": "hackathon",
+    "date": "2026-08-02",
+    "endDate": "2026-08-03",
+    "city": "New Delhi",
+    "state": "Delhi",
+    "description": "National student hackathon hosted at Maharaja Surajmal Institute (MSI). Build and pitch open innovation prototypes to industry veterans.",
+    "registrationUrl": "https://unstop.com/hackathons/hackground-india-2k25-maharaja-surajmal-institute-msi-new-delhi-1520271",
+    "sourcePlatform": "Unstop",
+    "isOnline": false,
+    "prize": "₹1,50,000 Cash Prize Pool",
+    "tags": [
+      "Open Innovation",
+      "Student"
+    ]
+  },
+  {
+    "id": 37,
+    "title": "ET AI Hackathon 3.0",
+    "type": "hackathon",
+    "date": "2026-08-15",
+    "endDate": "2026-08-28",
+    "city": "Online",
+    "state": "Online",
+    "description": "The Economic Times flagship nationwide hackathon for building scalable consumer and corporate AI solutions.",
+    "registrationUrl": "https://unstop.com/blog/upcoming-hackathons",
+    "sourcePlatform": "Unstop",
+    "isOnline": true,
+    "prize": "₹12,00,000 + PPIs",
+    "tags": [
+      "Applied AI",
+      "Enterprise"
+    ]
+  },
+  {
+    "id": 38,
+    "title": "India Connected: APIs for a Billion Lives 2026",
+    "type": "hackathon",
+    "date": "2026-08-12",
+    "endDate": "2026-08-15",
+    "city": "New Delhi",
+    "state": "Delhi",
+    "description": "In-person GSMA hackathon on HackerEarth. Build API-powered solutions using Open Gateway GSMA APIs to address India's real-world connectivity challenges.",
+    "registrationUrl": "https://www.hackerearth.com/challenges/hackathon/india-connected-apis-for-a-billion-lives/",
+    "sourcePlatform": "HackerEarth",
+    "isOnline": false,
+    "prize": "₹5,00,000 + Tech Gadgets",
+    "tags": [
+      "APIs",
+      "GSMA",
+      "Networks"
+    ]
+  },
+  {
+    "id": 39,
+    "title": "Thales GenTech India Hackathon 2026",
+    "type": "hackathon",
+    "date": "2026-08-20",
+    "endDate": "2026-08-28",
+    "city": "Online",
+    "state": "Online",
+    "description": "National innovation challenge by Thales. Tracks: Cybersecurity, Aerospace/Aviation, and AI for Social Impact. Open to solo and teams up to 5.",
+    "registrationUrl": "https://www.hackerearth.com/challenges/hackathon/thales-gentech-india-hackathon-3/",
+    "sourcePlatform": "HackerEarth",
+    "isOnline": true,
+    "prize": "Job Offers at Thales + Cash Prizes",
+    "tags": [
+      "CyberSec",
+      "AI",
+      "Aerospace"
+    ]
+  },
+  {
+    "id": 40,
+    "title": "SuRaksha Cyber Hackathon 3.0",
+    "type": "hackathon",
+    "date": "2026-08-05",
+    "endDate": "2026-08-05",
+    "city": "Online",
+    "state": "Online",
+    "description": "Campus-focused cybersecurity hackathon by Canara Bank. Build secure authentication systems and mobile banking anti-fraud patterns.",
+    "registrationUrl": "https://canarabank.hackerearth.com/",
+    "sourcePlatform": "HackerEarth",
+    "isOnline": true,
+    "prize": "Pre-Placement Interviews (PPI)",
+    "tags": [
+      "FinTech",
+      "CyberSec",
+      "AI"
+    ]
+  },
+  {
+    "id": 41,
+    "title": "Bharatiya Antariksh Hackathon 2026",
+    "type": "hackathon",
+    "date": "2026-08-07",
+    "endDate": "2026-08-08",
+    "city": "Hyderabad",
+    "state": "Telangana",
+    "description": "National space technology innovation challenge powered by ISRO and Hack2Skill. Hack on 14 geospatial and image processing problems at NRSC, Hyderabad.",
+    "registrationUrl": "https://hack2skill.com/event/bah2025",
+    "sourcePlatform": "Hack2Skill",
+    "isOnline": false,
+    "prize": "ISRO Internship Opportunity + Certificates",
+    "tags": [
+      "SpaceTech",
+      "ISRO",
+      "AI/ML"
+    ]
+  },
+  {
+    "id": 42,
+    "title": "AMD Slingshot — National AI Startup Challenge",
+    "type": "hackathon",
+    "date": "2026-08-01",
+    "endDate": "2026-08-31",
+    "city": "Online",
+    "state": "Online",
+    "description": "Accelerate your AI startup journey with AMD and Hack2Skill. Focused on building hardware-accelerated generative AI models using Ryzen processors.",
+    "registrationUrl": "https://hack2skill.com",
+    "sourcePlatform": "Hack2Skill",
+    "isOnline": true,
+    "prize": "₹10,00,000 + Innovation Grants",
+    "tags": [
+      "AI",
+      "AMD",
+      "Hardware"
+    ]
+  },
+  {
+    "id": 43,
+    "title": "Bolt.new India Hackathon Kickoff",
+    "type": "hackathon",
+    "date": "2026-08-07",
+    "endDate": "2026-08-07",
+    "city": "Bangalore",
+    "state": "Karnataka",
+    "description": "Official community kickoff meetup for building AI-augmented workflows with Bolt.new. Work with expert developers and pitch your ideas.",
+    "registrationUrl": "https://luma.com/uvtz1cmi",
+    "sourcePlatform": "Luma",
+    "isOnline": false,
+    "prize": null,
+    "tags": [
+      "Bolt.new",
+      "Community",
+      "Builders"
+    ]
+  },
+  {
+    "id": 44,
+    "title": "Clay / Lovable AI Automation Hackathon",
+    "type": "hackathon",
+    "date": "2026-08-01",
+    "endDate": "2026-08-01",
+    "city": "Bangalore",
+    "state": "Karnataka",
+    "description": "In-person workflow building challenge. Build sales automation and customer intelligence workflows using Clay and Lovable.",
+    "registrationUrl": "https://lu.ma/bi05",
+    "sourcePlatform": "Luma",
+    "isOnline": false,
+    "prize": "Clay & Lovable Free Workspace Credits",
+    "tags": [
+      "Clay",
+      "Lovable",
+      "AI Tools"
+    ]
+  },
+  {
+    "id": 45,
+    "title": "Community Web Dev Workshops",
+    "type": "workshop",
+    "date": "2026-08-15",
+    "endDate": "2026-08-16",
+    "city": "Multiple Cities",
+    "state": "Online",
+    "description": "Curated workshops covering advanced UI/UX, CSS architecture, Tailwind integration, and React styling performance optimizations.",
+    "registrationUrl": "https://luma.com/CommunityMeetups",
+    "sourcePlatform": "Luma",
+    "isOnline": true,
+    "prize": null,
+    "tags": [
+      "Meetup",
+      "WebDev",
+      "Workshop"
+    ]
+  },
+  {
+    "id": 46,
+    "title": "NCSA GPU Open Hackathon 2026",
+    "type": "bootcamp",
+    "date": "2026-08-12",
+    "endDate": "2026-08-21",
+    "city": "Online",
+    "state": "Online",
+    "description": "Hands-on GPU acceleration bootcamp organized by NVIDIA and NCSA. Port and optimize scientific codebases on high-performance GPU clusters.",
+    "registrationUrl": "https://www.openhackathons.org/s/siteevent/a0CUP000013BcYw2AK/se000370",
+    "sourcePlatform": "OpenHackathons",
+    "isOnline": true,
+    "prize": "NVIDIA Expert Mentorship + GPU Cluster Access",
+    "tags": [
+      "GPU",
+      "NVIDIA",
+      "AI/ML",
+      "HPC"
+    ]
+  },
+  {
+    "id": 47,
+    "title": "TACC Supercomputing Open Hackathon 2026",
+    "type": "bootcamp",
+    "date": "2026-08-21",
+    "endDate": "2026-08-30",
+    "city": "Online",
+    "state": "Online",
+    "description": "Accelerate your code on TACC's world-class supercomputers. Guided porting and AI model optimizations with NVIDIA systems architects.",
+    "registrationUrl": "https://www.openhackathons.org/s/siteevent/a0CUP00000rxHPh2AM/se000357",
+    "sourcePlatform": "OpenHackathons",
+    "isOnline": true,
+    "prize": "TACC Supercomputer Access + Mentorship",
+    "tags": [
+      "Supercomputing",
+      "GPU",
+      "HPC"
+    ]
+  },
+  {
+    "id": 48,
+    "title": "PSC/CMU/Pitt Scientific Coding Hackathon",
+    "type": "bootcamp",
+    "date": "2026-08-09",
+    "endDate": "2026-08-18",
+    "city": "Online",
+    "state": "Online",
+    "description": "Accelerate computational chemistry, biology, or astrophysics models on GPU clusters. Hosted by CMU, University of Pittsburgh, and NVIDIA.",
+    "registrationUrl": "https://www.openhackathons.org",
+    "sourcePlatform": "OpenHackathons",
+    "isOnline": true,
+    "prize": "GPU Core-hours Grants",
+    "tags": [
+      "Research",
+      "GPU",
+      "HPC"
+    ]
+  }
+]
