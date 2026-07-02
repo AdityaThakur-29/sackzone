@@ -451,6 +451,34 @@ function getFilteredEvents() {
     .sort((a, b) => new Date(a.date) - new Date(b.date));
 }
 
+function getEventRegistrationUrl(ev) {
+  const url = ev.registrationUrl || '';
+  try {
+    const parsedUrl = new URL(url);
+    if (parsedUrl.pathname === '/' || parsedUrl.pathname === '') {
+      const slug = ev.title
+        .toLowerCase()
+        .replace(/[^a-z0-9]+/g, '-')
+        .replace(/(^-|-$)/g, '');
+      
+      if (url.includes('unstop.com')) {
+        return `https://unstop.com/hackathons/${slug}`;
+      } else if (url.includes('hack2skill.com')) {
+        return `https://hack2skill.com/event/${slug}`;
+      } else if (url.includes('hackerearth.com')) {
+        return `https://www.hackerearth.com/challenges/hackathon/${slug}`;
+      } else if (url.includes('openhackathons.org')) {
+        return `https://www.openhackathons.org/s/siteevent/${slug}`;
+      } else if (url.includes('lu.ma')) {
+        return `https://lu.ma/${slug}`;
+      }
+    }
+  } catch (err) {
+    // If URL parsing fails, return as-is
+  }
+  return url;
+}
+
 function renderCard(ev) {
   const badgeClass = `badge-${ev.type}`;
   const onlineBadge = ev.isOnline ? `<span class="badge badge-online">ONLINE</span>` : '';
@@ -473,7 +501,7 @@ function renderCard(ev) {
       <div class="card-tags">${tags}</div>
       <div class="card-footer">
         ${prizeBadge}
-        <a href="${ev.registrationUrl}" target="_blank" class="register-btn">
+        <a href="${getEventRegistrationUrl(ev)}" target="_blank" class="register-btn">
           REGISTER <span class="arrow">→</span>
         </a>
       </div>
